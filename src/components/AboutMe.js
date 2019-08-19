@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 
 export default class AboutMe extends Component {
+    constructor(props) {
+        super(props);
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e) {
+        
+    }
+
   render() {
     return (
         <section id="aboutme" className="container">
@@ -17,47 +27,47 @@ export default class AboutMe extends Component {
                 {/* <!-- accordion start -->
                 <!-- ================ --> */}
                 <div className="col-md-6">
-                    <div id="accordion" className="panel-group collapse-style-1">
-                        <div className="panel panel-default">
-                            <div className="panel-heading">
-                            <h4 className="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                <i className="fa fa-university pr-10"></i>Education
+                    <div id="accordion" className="collapse-style-2" role="tablist" aria-multiselectable="true">
+                        <div id="cardOne" className="card">
+                            <div className="card-header" role="tab" id="headingOne">
+                                <h4 className="mb-0">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" className="" onClick={this.handleClick}>
+                                    <i className="title-icon fa fa-university"></i>Education<i className="collapse-icon fas fa-angle-up"></i>
                                 </a>
-                            </h4>
+                                </h4>
                             </div>
-                            <div id="collapseOne" className="panel-collapse collapse in">
-                            <div className="panel-body">
+                            <div id="collapseOne" className="collapse accordianLinkHook show" role="tabpanel" aria-labelledby="headingOne">
+                                <div className="card-block light-gray-bg">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue dui vehicula, tincidunt diam ac, faucibus arcu. Etiam pellentesque imperdiet elit, id bibendum lorem auctor a. Donec rhoncus euismod pellentesque. Sed pretium semper nisi. Proin euismod euismod justo, quis mattis nulla iaculis nec. Integer at dolor ante. Donec efficitur suscipit nunc lobortis molestie.
-                            </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="panel panel-default">
-                            <div className="panel-heading">
-                            <h4 className="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" className="collapsed">
-                                <i className="fa fa-desktop pr-10"></i>Professional Experience
+                        <div id="cardTwo" className="card">
+                            <div className="card-header" role="tab" id="headingTwo">
+                                <h4 className="mb-0">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" className="collapsed" onClick={this.handleClick}>
+                                    <i className="title-icon fa fa-desktop"></i>Professional Experience<i className="collapse-icon fas fa-angle-up"></i>
                                 </a>
-                            </h4>
+                                </h4>
                             </div>
-                            <div id="collapseTwo" className="panel-collapse collapse">
-                            <div className="panel-body">
+                            <div id="collapseTwo" className="collapse accordianLinkHook" role="tabpanel" aria-labelledby="headingTwo">
+                                <div className="card-block light-gray-bg">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue dui vehicula, tincidunt diam ac, faucibus arcu. Etiam pellentesque imperdiet elit, id bibendum lorem auctor a. Donec rhoncus euismod pellentesque. Sed pretium semper nisi. Proin euismod euismod justo, quis mattis nulla iaculis nec. Integer at dolor ante. Donec efficitur suscipit nunc lobortis molestie.
-                            </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="panel panel-default">
-                            <div className="panel-heading">
-                            <h4 className="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" className="collapsed">
-                                <i className="fa fa-code pr-10"></i>Web Development Experience
+                        <div id="cardThree" className="card">
+                            <div className="card-header" role="tab" id="headingThree">
+                                <h4 className="mb-0">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" className="collapsed" onClick={this.handleClick}>
+                                    <i className="title-icon fa fa-code"></i>Web Development Experience<i className="collapse-icon fas fa-angle-up"></i>
                                 </a>
-                            </h4>
+                                </h4>
                             </div>
-                            <div id="collapseThree" className="panel-collapse collapse">
-                            <div className="panel-body">
+                            <div id="collapseThree" className="collapse accordianLinkHook" role="tabpanel" aria-labelledby="headingThree">
+                                <div className="card-block light-gray-bg">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue dui vehicula, tincidunt diam ac, faucibus arcu. Etiam pellentesque imperdiet elit, id bibendum lorem auctor a. Donec rhoncus euismod pellentesque. Sed pretium semper nisi. Proin euismod euismod justo, quis mattis nulla iaculis nec. Integer at dolor ante. Donec efficitur suscipit nunc lobortis molestie.
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>

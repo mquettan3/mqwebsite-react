@@ -1,4 +1,55 @@
 /////  Panels  -- Mostly defaulted to Bootstrap Panels
+/*Style 2*/
+.collapse-style-2 .card {
+    border-color: transparent;
+}
+
+.collapse-style-2 .card + .card {
+    margin-top: 5px;
+}
+
+.collapse-style-2 .card-header {
+    background-color: transparent;
+    padding: 0;
+}
+
+.collapse-style-2 .card-header a {
+    color: #ffffff;
+    font-weight: 400;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    text-decoration: none;
+    padding: 10px 40px 10px 15px;
+    font-size: 16px;
+}
+
+.collapse-style-2 .card-header a.collapsed {
+    background-color: #333333;
+}
+
+.collapse-style-2 .card-block {
+    border-top: none !important;
+    background-color: transparent;
+    padding: 15px 0;
+}
+
+.collapse-style-2 .card-block.p-15 {
+    padding: 15px;
+}
+
+.collapse-style-2 .card-header a.collapsed {
+    background-color: #373737;
+}
+
+.collapse-style-2 .card-header a {
+    background-color: #0d5ca2;
+}
+
+.collapse-style-2 .title-icon {
+    margin-right: 10px;
+}
+
 .panel-group .panel-default {
     background-color: $accordian-panel-background-color;
   }
