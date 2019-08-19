@@ -102,6 +102,19 @@ app.listen(PORT, function() {
 //     return res.status(returnStatus).send(returnMessage);
 // });
 
+// Respond with the specified file in ../src/assets/images
+app.get('/images/:fileName', function (req, res) {
+    // Send the file requested from the static location
+    res.sendFile(path.resolve(__dirname + '/../') + '/src/assets/images/' + path.basename(req.params.fileName), function(err) {
+      if(err) {
+        console.error(err);
+      }
+    });
+  
+    // Server debug print
+    console.log("Sent file: " + path.resolve(__dirname + '/../') + '/src/assets/images/' + path.basename(req.params.fileName));
+  });
+
 // Serve static assets if in productions
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('../build'));
