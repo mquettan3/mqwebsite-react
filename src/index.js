@@ -13,6 +13,9 @@ import '@fortawesome/fontawesome-free/js/all.js'
 // WOW
 import 'wow.js/css/libs/animate.css';
 
+// Custom styles
+import './assets/css/main.css';
+
 ReactDOM.render(
   <App />,
   document.getElementById('root')

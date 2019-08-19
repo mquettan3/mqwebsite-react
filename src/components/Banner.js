@@ -6,8 +6,7 @@ export default class Banner extends Component {
     const backgroundStyle = {
         backgroundImage: "url(" + BackgroundImage + ")"
     }
-
-    console.log(BackgroundImage);
+    
     return (
         <section id="home" className="banner">
             <div style={backgroundStyle} className="banner-image" >
@@ -18,7 +17,7 @@ export default class Banner extends Component {
                             <p>
                                 Developing. Creating. Solving.<br/>
                                 <a href="#aboutme" className="page-scroll btn btn-dark btn-lg btn-gray-transparent btn-animated">
-                                    Learn More<i className="fa fa-arrow-down pl-20"></i>
+                                    Learn More <span className="pl-20"><i className="fa fa-arrow-down"></i></span>
                                 </a>
                             </p>
                         </div>

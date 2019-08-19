@@ -8,31 +8,19 @@ import Mission from "./components/Mission.js";
 import Contact from "./components/Contact.js";
 import Copyright from "./components/Copyright.js";
 
-import './assets/css/main.css';
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loaded: false
-    }
-
-  }
-  
+class App extends Component {  
   componentDidMount() {
     // Initialize Animations
     const wow = new WOW();
     wow.init();
 
     // Remove the pre-loader
-    const loader = document.querySelector('.loader-wrapper');
-    loader.classList.add('animated', 'fadeOut');
+    this.loader = document.querySelector('.loader-wrapper');
+    this.loader.classList.add('animated', 'fadeOut');
 
-    // loader.addEventListener("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() {
-    //   loader.remove();
-    // });
-    // loader.remove();
+    this.loader.addEventListener("animationend", () => {
+      this.loader.remove();
+    });
   }
 
   render() {

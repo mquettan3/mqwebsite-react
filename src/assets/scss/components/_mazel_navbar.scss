@@ -45,7 +45,6 @@
 
 /* Logo Style   ||-------------------*/
 .logo {
-    float: left;
     text-align: left;
     display: inline-block;
     text-decoration: none;
@@ -192,7 +191,6 @@
         top: 65px;
         left: 0;
         float: none;
-        display: block;
         width: 100%;
         background: #333;
         overflow-y: auto;
@@ -201,7 +199,7 @@
     }
 
     .nav-menu-icon, .header-fixed .nav-menu-icon {
-        display: inline-block;
+        display: block;
         float: right;
     }
 

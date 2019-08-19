@@ -10,6 +10,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
+    "jquery.scrollto": "^2.1.2",
     "node-sass": "^4.12.0",
     "nodemailer": "^6.3.0",
     "popper.js": "^1.15.0",
@@ -23,13 +24,12 @@
   "devDependencies": {},
   "scripts": {
     "prestart": "node-sass ./src/assets/scss -o ./src/assets/css",
-    "poststart": "node-sass --watch ./src/assets/scss -o ./src/assets/css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "scss": "node-sass ./src/assets/scss -o ./src/assets/css",
-    "watch-scss": "node-sass --watch ./src/assets/scss -o ./src/assets/css"
+    "watch-scss": "node-sass --watch --recursive ./src/assets/scss -o ./src/assets/css"
   },
   "repository": {
     "type": "git",
