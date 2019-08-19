@@ -18,9 +18,17 @@
   },
   "devDependencies": {},
   "scripts": {
+    "prestart": "node-sass ./src/assets/scss -o ./src/assets/css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "scss": "node-sass ./src/assets/scss -o ./src/assets/css",
+    "watch-scss": "node-sass --watch ./src/assets/scss -o ./src/assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mquettan3/mqwebsite-react.git"
+  },
+  "author": "Marcus Quettan"
 }
