@@ -380,17 +380,11 @@ h5.features-title {
 .lightBoxGallery img {
   padding: 0 2px 0 2px; }
 
-.mb-10 {
-  margin-bottom: 10px; }
-
-.mb-20 {
-  margin-bottom: 20px; }
-
-.pr-5 {
+.contact-footer span {
   padding-right: 5px; }
 
-.pr-10 {
-  padding-right: 10px; }
+.contact-footer .hidden {
+  display: none; }
 
 .dark .contact-footer {
   background-color: #1b1b1b;
@@ -424,6 +418,14 @@ h5.features-title {
 .link-dark:hover {
   color: #777777;
   text-decoration: underline; }
+
+.form-group {
+  position: relative; }
+
+.form-group span {
+  position: absolute;
+  top: 7px;
+  right: 5px; }
 
 .dark .contact-footer-content .form-control {
   border-color: #1b1b1b; }
@@ -1106,3 +1108,7 @@ section.copyright_section p {
 .content-wrapper {
   padding-top: 67px;
   padding-bottom: 67px; }
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px; }

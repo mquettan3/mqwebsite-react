@@ -33,23 +33,23 @@ export default class Contact extends Component {
                                     </p>
     
                                     <ul className="list-inline mb-20">
-                                        <li><i className="text-default fa fa-map-marker pr-5"></i> Atlanta, GA</li>
-                                        <li><i className="text-default fa fa-phone pl-10 pr-5"></i> +1 (770) 765-5515</li>
-                                        <li><a href="mailto:mquettan@gmail.com" className="link-dark"><i className="text-default fa fa-envelope-o pl-10 pr-10"></i>mquettan@gmail.com</a></li>
+                                        <li><span><i className="text-default fa fa-map-marker"></i></span> Atlanta, GA</li>
+                                        <li><span><i className="text-default fa fa-phone"></i></span> +1 (770) 765-5515</li>
+                                        <li><a href="mailto:mquettan@gmail.com" className="link-dark"><span><i className="text-default fa fa-envelope"></i></span> mquettan@gmail.com</a></li>
                                     </ul>
                                     <div className="separator-2"></div>
                                     <ul className="social-links circle margin-clear animated-effect-1">
-                                        <li className="facebook"><a target="_blank" href="http://www.facebook.com"><i className="fa fa-facebook"></i></a></li>
-                                        <li className="twitter"><a target="_blank" href="http://www.twitter.com"><i className="fa fa-twitter"></i></a></li>
-                                        <li className="googleplus"><a target="_blank" href="http://plus.google.com"><i className="fa fa-google-plus"></i></a></li>
-                                        <li className="linkedin"><a target="_blank" href="http://www.linkedin.com"><i className="fa fa-linkedin"></i></a></li>
-                                        <li className="xing"><a target="_blank" href="http://www.xing.com"><i className="fa fa-xing"></i></a></li>
-                                        <li className="skype"><a target="_blank" href="http://www.skype.com"><i className="fa fa-skype"></i></a></li>
-                                        <li className="youtube"><a target="_blank" href="https://www.youtube.com"><i className="fa fa-youtube"></i></a></li>
-                                        <li className="dribbble"><a target="_blank" href="https://dribbble.com/"><i className="fa fa-dribbble"></i></a></li>
-                                        <li className="pinterest"><a target="_blank" href="http://www.pinterest.com"><i className="fa fa-pinterest"></i></a></li>
-                                        <li className="flickr"><a target="_blank" href="http://www.flickr.com"><i className="fa fa-flickr"></i></a></li>
-                                        <li className="instagram"><a target="_blank" href="http://www.instagram.com"><i className="fa fa-instagram"></i></a></li>
+                                        <li className="facebook"><a target="_blank" href="http://www.facebook.com"><i className="fab fa-facebook-f fa-lg" data-fa-transform="down-4"></i></a></li>
+                                        <li className="twitter"><a target="_blank" href="http://www.twitter.com"><i className="fab fa-twitter fa-lg" data-fa-transform="down-4"></i></a></li>
+                                        <li className="googleplus"><a target="_blank" href="http://plus.google.com"><i className="fab fa-google-plus fa-lg" data-fa-transform="down-4"></i></a></li>
+                                        <li className="linkedin"><a target="_blank" href="http://www.linkedin.com"><i className="fab fa-linkedin fa-lg" data-fa-transform="down-4"></i></a></li>
+                                        <li className="xing"><a target="_blank" href="http://www.xing.com"><i className="fab fa-xing fa-lg" data-fa-transform="down-4"></i></a></li>
+                                        <li className="skype"><a target="_blank" href="http://www.skype.com"><i className="fab fa-skype fa-lg" data-fa-transform="down-4"></i></a></li>
+                                        <li className="youtube"><a target="_blank" href="https://www.youtube.com"><i className="fab fa-youtube fa-lg" data-fa-transform="down-4"></i></a></li>
+                                        <li className="dribbble"><a target="_blank" href="https://dribbble.com/"><i className="fab fa-dribbble fa-lg" data-fa-transform="down-4"></i></a></li>
+                                        <li className="pinterest"><a target="_blank" href="http://www.pinterest.com"><i className="fab fa-pinterest fa-lg" data-fa-transform="down-4"></i></a></li>
+                                        <li className="flickr"><a target="_blank" href="http://www.flickr.com"><i className="fab fa-flickr fa-lg" data-fa-transform="down-4"></i></a></li>
+                                        <li className="instagram"><a target="_blank" href="http://www.instagram.com"><i className="fab fa-instagram fa-lg" data-fa-transform="down-4"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -69,19 +69,19 @@ export default class Contact extends Component {
                                         <div className="form-group has-feedback mb-10">
                                             <label className="sr-only" htmlFor="name">Name</label>
                                             <input type="text" className="form-control" id="name" placeholder="Name" name="name" required />
-                                            <i className="fa fa-user form-control-feedback"></i>
+                                            <span><i className="fa fa-user form-control-feedback"></i></span>
                                         </div>
-                                        <div className="form-group has-feedback mb-1">
+                                        <div className="form-group has-feedback mb-10">
                                             <label className="sr-only" htmlFor="email">Email address</label>
                                             <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" required />
-                                            <i className="fa fa-envelope form-control-feedback"></i>
+                                            <span><i className="fa fa-envelope form-control-feedback"></i></span>
                                         </div>
                                         <div className="form-group has-feedback mb-10">
                                             <label className="sr-only" htmlFor="message">Message</label>
                                             <textarea className="message_box form-control" rows="4" id="message" placeholder="Message" name="message" required></textarea>
-                                            <i className="fa fa-pencil form-control-feedback"></i>
+                                            <span><i className="fa fa-pencil-alt form-control-feedback"></i></span>
                                         </div>
-                                        <input type="submit" value="Send" className="margin-clear submit-button btn btn-default" />
+                                        <input type="submit" value="Send" className="margin-clear submit-button btn btn-default" onClick={this.handleSubmit}/>
                                     </form>
                                 </div>
                             </div>

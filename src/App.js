@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="mq-website">
+      <div className="landing-page">
     
         {/* <!-- Top Navigation Bar --> */}
         <Navbar />

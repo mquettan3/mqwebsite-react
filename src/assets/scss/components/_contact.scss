@@ -1,16 +1,14 @@
 /////General Classes
-.mb-10 {
-    margin-bottom: 10px;
-  }
-  .mb-20 {
-    margin-bottom: 20px;
-  }
-  .pr-5 {
+
+.contact-footer {
+  span {
     padding-right: 5px;
   }
-  .pr-10 {
-    padding-right: 10px;
+
+  .hidden {
+    display: none;
   }
+}
   
   /////Footer Wrapper
   .dark .contact-footer {
@@ -63,6 +61,14 @@
   
   /////All Input
   /////All Input Boxes
+  .form-group {
+    position: relative;
+  }
+  .form-group span {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+  }
   .dark .contact-footer-content .form-control {
     border-color: $dark-background-color;
   }

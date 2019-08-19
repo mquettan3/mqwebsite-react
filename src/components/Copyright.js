@@ -21,7 +21,7 @@ export default class Copyright extends Component {
                     <div className="row">
                     <div className="col-lg-12">
                         <p>
-                        Copyright <i className="fa fa-copyright"></i> {this.state.currentYear} Marcus Quettan
+                        Copyright <i className="far fa-copyright"></i> {this.state.currentYear} Marcus Quettan
                         </p>
                     </div>
                     </div>
