@@ -1,0 +1,9 @@
+put the angle up icon to the right of theh collapse. Can use javascript to edit the icon like shown here: https://stackoverflow.com/questions/46210501/switch-between-icons-when-using-fontawesome-5-0-svg-framework/46756498
+animate the progress bars.
+Find linea icon font SVGs.
+implement emails and error/success messages in contact form.
+Replace placeholder text with something useful.
+Re-create google voice number
+Add a portfolio slider into a new section
+Create a blog page
+
