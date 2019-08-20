@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 // Require Axios for HTTP requests
 const axios = require('axios');
 
+var serverLocation = process.env.REACT_APP_SERVER_LOCATION;
+
 export default class Contact extends Component {
     constructor(props) {
         super(props);
@@ -11,28 +13,75 @@ export default class Contact extends Component {
         this.onChange = this.onChange.bind(this);
 
         this.state = {
-            serverThinking: false,
-            name: "",
-            email: "",
-            message:""
+            isSubmitButtonClicked: false,
+            isServerThinking: false,
+            name: {value: "", isValid: false},
+            email: {value: "", isValid: false},
+            message:{value: "", isValid: false},
+            showSuccess: false,
+            showFail: false,
+            showInvalid: false
         }
 
     }
 
     handleSubmit(e) {
-        e.preventDefault();
+        // Server begins thinking
+        this.setState({isSubmitButtonClicked: true, isServerThinking: true});
+
+        // Make sure everything is valid.
+        if (
+            this.state.name.isValid &&
+            this.state.email.isValid &&
+            this.state.message.isValid 
+        ){
+            // Only prevent default if the in puts are valid.
+            e.preventDefault();
+
+            axios.post(serverLocation + '/email', {
+                name: this.state.name.value,
+                email: this.state.email.value,
+                message: this.state.message.value
+            }).then(function (response) {
+                // handle success   
+                console.log(response);
+    
+                // Pop up a success alert
+                this.setState({showSuccess: true, isServerThinking: false});
+            }.bind(this))
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+        
+                // Pop up an error alert
+                this.setState({showFail: true, isServerThinking: false});
+            }.bind(this));
+        } else {
+            console.log("Invalid Submit!");
+            this.setState({showInvalid: true, isServerThinking: false});
+        }
     }
 
     onChange(e) {
+        let validity = false;
         switch(e.target.id) {
             case "name":
-                this.setState({name: e.target.value})
+                if(e.target.value) {
+                    validity = true;
+                }
+                this.setState({name: {value: e.target.value, isValid: validity}});
                 break;
             case "email":
-                this.setState({email: e.target.value})
+                if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value)) {
+                    validity = true;
+                }
+                this.setState({email: {value: e.target.value, isValid: validity}});
                 break;
             case "message":
-                this.setState({message: e.target.value})
+                if(e.target.value) {
+                    validity = true;
+                }
+                this.setState({message: {value: e.target.value, isValid: validity}});
                 break;
         }
     }
@@ -92,26 +141,35 @@ export default class Contact extends Component {
                                 <div className="col-md-6">
                                     <div className="contact-footer-content">
                                         <h2 className="title">Contact Me</h2>
-                                        <div className="alert alert-success hidden" id="MessageSent">
-                                            Your message was successfully sent!  I'll get back to you at the email address you provided soon.
-                                        </div>
-                                        <div className="alert alert-danger hidden" id="MessageNotSent">
-                                            Oops! Something went wrong please refresh the page and try again.  If the issue persists, please send me an email directly to mquettan@gmail.com!
-                                        </div>
+                                        {this.state.showSuccess && 
+                                            <div className="alert alert-success" id="MessageSent">
+                                                Your message was successfully sent!  I'll get back to you at the email address you provided soon.
+                                            </div>
+                                        }
+                                        {this.state.showInvalid && 
+                                            <div className="alert alert-danger" id="MessageNotSent">
+                                                Unfortunately, one of the inputs you provided is invalid.  Please resolve the errors and then submit again!
+                                            </div>
+                                        }
+                                        {this.state.showFail && 
+                                            <div className="alert alert-danger" id="MessageNotSent">
+                                                Oops! Something went wrong on our server, please refresh the page and try again.  If the issue persists, please send me an email directly to mquettan@gmail.com!
+                                            </div>
+                                        }
                                         <form role="form" id="contact-footer-form" className="margin-clear">
                                             <div className="form-group has-feedback mb-10">
                                                 <label className="sr-only" htmlFor="name">Name</label>
-                                                <input type="text" className="form-control" id="name" placeholder="Name" name="name" value={this.state.name} onChange={this.onChange} required/>
+                                                <input type="text" className="form-control" id="name" placeholder="Name" name="name" value={this.state.name.value} onChange={this.onChange} required/>
                                                 <span><i className="fa fa-user form-control-feedback"></i></span>
                                             </div>
                                             <div className="form-group has-feedback mb-10">
                                                 <label className="sr-only" htmlFor="email">Email address</label>
-                                                <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" value={this.state.email} onChange={this.onChange} required/>
+                                                <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" value={this.state.email.value} onChange={this.onChange} required/>
                                                 <span><i className="fa fa-envelope form-control-feedback"></i></span>
                                             </div>
                                             <div className="form-group has-feedback mb-10">
                                                 <label className="sr-only" htmlFor="message">Message</label>
-                                                <textarea className="message_box form-control" rows="4" id="message" placeholder="Message" name="message" value={this.state.message} onChange={this.onChange} required></textarea>
+                                                <textarea className="message_box form-control" rows="4" id="message" placeholder="Message" name="message" value={this.state.message.value} onChange={this.onChange} required></textarea>
                                                 <span><i className="fa fa-pencil-alt form-control-feedback"></i></span>
                                             </div>
                                             <input type="submit" value="Send" className="margin-clear submit-button btn btn-default" onClick={this.handleSubmit}/>
