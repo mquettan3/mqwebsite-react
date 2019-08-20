@@ -1,5 +1,3 @@
-Find linea icon font SVGs.
-implement emails and error/success messages in contact form.
 Replace placeholder text with something useful.
 Re-create google voice number
 Add a portfolio slider into a new section
