@@ -139,7 +139,7 @@ export default class AboutMe extends Component {
                         <div className="progress mt-20 style-1">
                             <span className="text"></span>
                             <div className="progress-bar progress-bar-default" data-animate-width="100%">
-                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">C++</span>
+                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">C/C++</span>
                             </div>
                         </div>
                         <div className="progress style-1">
@@ -157,13 +157,19 @@ export default class AboutMe extends Component {
                         <div className="progress style-1">
                             <span className="text"></span>
                             <div className="progress-bar progress-bar-default" data-animate-width="90%">
-                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Java</span>
+                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Python</span>
                             </div>
                         </div>
                         <div className="progress style-1">
                             <span className="text"></span>
                             <div className="progress-bar progress-bar-default" data-animate-width="85%">
-                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">C#</span>
+                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Java/C#</span>
+                            </div>
+                        </div>
+                        <div className="progress style-1">
+                            <span className="text"></span>
+                            <div className="progress-bar progress-bar-default" data-animate-width="65%">
+                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Other Langauges (Swift, Ada, R)</span>
                             </div>
                         </div>
                         <div className="progress style-1">
