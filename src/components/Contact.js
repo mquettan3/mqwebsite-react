@@ -12,6 +12,7 @@ export default class Contact extends Component {
         
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
+        this.onErrorMessageClick = this.onErrorMessageClick.bind(this);
 
         this.state = {
             isSubmitButtonClicked: false,
@@ -24,6 +25,10 @@ export default class Contact extends Component {
             showInvalid: false
         }
 
+    }
+
+    onErrorMessageClick(e) {
+        this.setState({showSuccess: false, showFail: false, showInvalid: false});
     }
 
     handleSubmit(e) {
@@ -155,17 +160,17 @@ export default class Contact extends Component {
                                     <div className="contact-footer-content">
                                         <h2 className="title">Contact Me</h2>
                                         {this.state.showSuccess && 
-                                            <div className="alert alert-success" id="MessageSent">
+                                            <div className="alert alert-success" id="MessageSent" onClick={this.onErrorMessageClick}>
                                                 Your message was successfully sent!  I'll get back to you at the email address you provided soon.
                                             </div>
                                         }
                                         {this.state.showInvalid && 
-                                            <div className="alert alert-danger" id="MessageNotSent">
+                                            <div className="alert alert-danger" id="MessageNotSent" onClick={this.onErrorMessageClick}>
                                                 Unfortunately, one of the inputs you provided is invalid.  Please resolve the errors and then submit again!
                                             </div>
                                         }
                                         {this.state.showFail && 
-                                            <div className="alert alert-danger" id="MessageNotSent">
+                                            <div className="alert alert-danger" id="MessageNotSent" onClick={this.onErrorMessageClick}>
                                                 Oops! Something went wrong on our server, please refresh the page and try again.  If the issue persists, please send me an email directly to mquettan@gmail.com!
                                             </div>
                                         }
