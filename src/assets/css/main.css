@@ -1039,33 +1039,9 @@ textarea.message_box.form-control {
 .collapse-style-2 .title-icon {
   margin-right: 10px; }
 
-.panel-group .panel-default {
-  background-color: #eaeaea; }
-
-.panel-group .panel-heading {
-  background-color: #eaeaea; }
-
-.panel-heading a {
-  font-weight: 400;
-  display: inline-block;
-  width: 100%;
-  position: relative;
-  text-decoration: none;
-  color: inherit; }
-
-.collapse-style-1 .panel-heading a.collapsed:after {
-  content: "\f0fe"; }
-
-.collapse-style-1 .panel-heading a:after {
-  font-family: "FontAwesome";
-  content: "\f146";
+.collapse-style-2 .collapse-icon {
   position: absolute;
-  right: 15px;
-  font-size: 14px;
-  font-weight: 300;
-  top: 50%;
-  line-height: 1;
-  margin-top: -7px; }
+  right: 10px; }
 
 .label {
   color: #333333;

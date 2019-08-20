@@ -50,43 +50,11 @@
     margin-right: 10px;
 }
 
-.panel-group .panel-default {
-    background-color: $accordian-panel-background-color;
-  }
-  
-  .panel-group .panel-heading {
-    background-color: $accordian-panel-background-color;
-  }
-  
-  .panel-heading a {
-      font-weight: 400;
-      display: inline-block;
-      width: 100%;
-      position: relative;
-      text-decoration: none;
-      // padding: 10px 40px 10px 15px;
-      color: inherit;
-  }
-  
-  // Plus Signs
-  .collapse-style-1 .panel-heading a.collapsed:after {
-      content: "\f0fe";
-  }
-  
-  // Minus Signs
-  .collapse-style-1 .panel-heading a:after {
-      font-family: "FontAwesome";
-      content: "\f146";
-      position: absolute;
-      right: 15px;
-      font-size: 14px;
-      font-weight: 300;
-      top: 50%;
-      line-height: 1;
-      margin-top: -7px;
-  }
-  
-  /////  End Panels
+.collapse-style-2 .collapse-icon {
+    position: absolute;
+    right: 10px;
+}
+/////  End Panels
   
   ///// Progress bars
   .label {
