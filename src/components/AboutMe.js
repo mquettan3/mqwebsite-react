@@ -138,43 +138,43 @@ export default class AboutMe extends Component {
                     <div id="progress_bars" className="col-md-6">
                         <div className="progress mt-20 style-1">
                             <span className="text"></span>
-                            <div className="progress-bar progress-bar-default" data-animate-width="95%">
+                            <div className="progress-bar progress-bar-default" data-animate-width="100%">
                                 <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">C++</span>
                             </div>
                         </div>
                         <div className="progress style-1">
                             <span className="text"></span>
+                            <div className="progress-bar progress-bar-default" data-animate-width="85%">
+                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Node.js</span>
+                            </div>
+                        </div>
+                        <div className="progress style-1">
+                            <span className="text"></span>
                             <div className="progress-bar progress-bar-default" data-animate-width="90%">
-                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Meteor.js</span>
+                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">React.js</span>
+                            </div>
+                        </div>
+                        <div className="progress style-1">
+                            <span className="text"></span>
+                            <div className="progress-bar progress-bar-default" data-animate-width="90%">
+                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Java</span>
                             </div>
                         </div>
                         <div className="progress style-1">
                             <span className="text"></span>
                             <div className="progress-bar progress-bar-default" data-animate-width="85%">
-                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Javascript</span>
+                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">C#</span>
                             </div>
                         </div>
                         <div className="progress style-1">
                             <span className="text"></span>
-                            <div className="progress-bar progress-bar-default" data-animate-width="90%">
-                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">HTML5</span>
+                            <div className="progress-bar progress-bar-default" data-animate-width="95%">
+                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Linux (Debian/Fedora based)</span>
                             </div>
                         </div>
                         <div className="progress style-1">
                             <span className="text"></span>
                             <div className="progress-bar progress-bar-default" data-animate-width="75%">
-                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">CSS</span>
-                            </div>
-                        </div>
-                        <div className="progress style-1">
-                            <span className="text"></span>
-                            <div className="progress-bar progress-bar-default" data-animate-width="100%">
-                                <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Unix</span>
-                            </div>
-                        </div>
-                        <div className="progress style-1">
-                            <span className="text"></span>
-                            <div className="progress-bar progress-bar-default" data-animate-width="90%">
                                 <span className="label object-non-visible" data-animation-effect="fadeInLeftSmall" data-effect-delay="1000">Amazon Web Services</span>
                             </div>
                         </div>
