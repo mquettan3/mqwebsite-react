@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 // Require Axios for HTTP requests
 const axios = require('axios');
 
-var serverLocation = process.env.REACT_APP_SERVER_LOCATION;
+// var serverLocation = process.env.REACT_APP_SERVER_LOCATION;
+var serverLocation = "http://192.168.56.102:5000";
 
 export default class Contact extends Component {
     constructor(props) {
@@ -27,7 +28,7 @@ export default class Contact extends Component {
 
     handleSubmit(e) {
         // Server begins thinking
-        this.setState({isSubmitButtonClicked: true, isServerThinking: true});
+        this.setState({showSuccess: false, showFail: false, showInvalid: false, isServerThinking: true});
 
         // Make sure everything is valid.
         if (
@@ -47,7 +48,7 @@ export default class Contact extends Component {
                 console.log(response);
     
                 // Pop up a success alert
-                this.setState({showSuccess: true, isServerThinking: false});
+                this.setState({showSuccess: true, isServerThinking: false, name: {value: ""}, email: {value: ""}, message: {value: ""}});
             }.bind(this))
             .catch(function (error) {
                 // handle error
@@ -87,6 +88,18 @@ export default class Contact extends Component {
     }
 
     render() {
+        let submitButton = <input type="submit" value="Send" className="margin-clear submit-button btn btn-default" onClick={this.handleSubmit}/>
+        if(this.state.isServerThinking) {
+          submitButton = <button disabled type="submit" className="margin-clear submit-button btn btn-default" onClick={this.handleSubmit}> 
+            Send
+            <div className="loading">
+              <div className="loading-bar"></div>
+              <div className="loading-bar"></div>
+              <div className="loading-bar"></div>
+              <div className="loading-bar"></div>
+            </div>
+          </button>
+        }
         return (
             // <!-- Dark wrapper -->
             <section id="contact" className="dark">
@@ -172,7 +185,7 @@ export default class Contact extends Component {
                                                 <textarea className="message_box form-control" rows="4" id="message" placeholder="Message" name="message" value={this.state.message.value} onChange={this.onChange} required></textarea>
                                                 <span><i className="fa fa-pencil-alt form-control-feedback"></i></span>
                                             </div>
-                                            <input type="submit" value="Send" className="margin-clear submit-button btn btn-default" onClick={this.handleSubmit}/>
+                                            {submitButton}
                                         </form>
                                     </div>
                                 </div>

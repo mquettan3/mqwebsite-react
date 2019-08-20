@@ -14,13 +14,16 @@ class App extends Component {
     const wow = new WOW();
     wow.init();
 
-    // Remove the pre-loader
-    this.loader = document.querySelector('.loader-wrapper');
-    this.loader.classList.add('animated', 'fadeOut');
-
-    this.loader.addEventListener("animationend", () => {
-      this.loader.remove();
-    });
+    // Couldn't figure out how to get this to trigger on load completion for each image (because css background images).  So, 1 second delay seems fine?
+    setTimeout( () => {
+      // Remove the pre-loader
+      this.loader = document.querySelector('.loader-wrapper');
+      this.loader.classList.add('animated', 'fadeOut');
+  
+      this.loader.addEventListener("animationend", () => {
+        this.loader.remove();
+      });
+    }, 1000);
   }
 
   render() {

@@ -31,76 +31,69 @@ app.listen(PORT, function() {
     console.log('Server is running on Port: ', PORT);
 });
 
-// app.post('/requestStaff', async function (req, res) {
-//     let returnStatus = 200;
-//     let returnMessage = 'OK';
-//     const uniqueID = uniqid();
-//     var requestStaffEmailComplete = requestStaffEmailTemplate;
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{FirstName}}", req.body.firstName);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{LastName}}", req.body.lastName);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{Title}}", req.body.title);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{Email}}", req.body.email);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{PhoneNumber}}", req.body.phone);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{ContactMethod}}", req.body.contactMethod);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{CompanyName}}", req.body.companyName);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{City}}", req.body.city);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{State}}", req.body.state);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{ZipCode}}", req.body.zip);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{Skills}}", req.body.skillTypes.join(",  "));
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{HireTypes}}", req.body.hireTypes.join(",  "));
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{Details}}", req.body.details);
-//     requestStaffEmailComplete = requestStaffEmailComplete.replace("{{RequestID}}", uniqueID);
-//     console.log(requestStaffEmailComplete);
+// Constants
+const emailTemplate = `
+To Marcus Quettan,
 
-//     var confirmationEmailComplete = genericConfirmationEmailTemplate;
-//     confirmationEmailComplete = confirmationEmailComplete.replace("{{FirstName}}", req.body.firstName);
-//     confirmationEmailComplete = confirmationEmailComplete.replace("{{RequestType}}", "request for staff");
-//     confirmationEmailComplete = confirmationEmailComplete.replace("{{RequestID}}", uniqueID);
-//     console.log(confirmationEmailComplete);
+From: {{Name}} - {{Email}}
 
-//     var mailOptions = {
-//         from: process.env.EMAIL_NAME,
-//         to: process.env.EMAIL_NAME,
-//         bcc: "",
-//         subject: 'IMPORTANT: Automated Staff Request from ' + req.body.firstName.value + ' ' + req.body.lastName.value,
-//         text: requestStaffEmailComplete
-//     };
+Message: {{Message}}
+`
 
-//     await wrappedSendMail(mailOptions, "Staff Request")
-//     .then(function(info) {
-//         console.log(info);
-//     })
-//     .catch(function(err){
-//         console.error(err);
-//         returnStatus = 400;
-//         returnMessage = 'Bad Request: Invalid Email address - Email failed to send - Contact lwalker@qm3us.com to request that the server admin verifies that the server is properly sending emails.';
-//     });
+async function wrappedSendMail(mailOptions, emailType) {
+  return new Promise((resolve, reject)=> {
+      let transporter = nodemailer.createTransport({
+          serivce: 'gmail',
+          host: 'smtp.gmail.com',
+          port: 465,
+          secure: true, // use SSL
+          auth: {
+              user: process.env.EMAIL_NAME,
+              pass: process.env.EMAIL_PASSWORD
+          }
+      });
+
+      transporter.sendMail(mailOptions, function(error, info) {
+          if (error) {
+              console.error(error);
+              reject(Error("Failed to send " + emailType + " email to " + mailOptions.to));
+          } else {
+              resolve("Successfully sent " + emailType + " email to " + mailOptions.to);
+          }
+      });
+  })
+}
+
+app.post('/email', async function (req, res) {
+    let returnStatus = 200;
+    let returnMessage = 'OK';
     
-//     let date = new Date();
-//     let htmlString = fs.readFileSync("confirmationTemplate.html", 'utf8');
-//     htmlString = htmlString.replace("{{CURRENT_YEAR}}", date.getFullYear());
-//     htmlString = htmlString.replace("{{EMAIL_TEXT}}", confirmationEmailComplete);
+    var emailComplete = emailTemplate;
+    emailComplete = emailComplete.replace("{{Name}}", req.body.name);
+    emailComplete = emailComplete.replace("{{Email}}", req.body.email);
+    emailComplete = emailComplete.replace("{{Message}}", req.body.message);
 
-//     mailOptions = {
-//         from: process.env.EMAIL_NAME,
-//         to: req.body.email,
-//         subject: 'QM3 Solutions: Confirmation Email',
-//         html: htmlString
-//     };
+    var mailOptions = {
+        from: process.env.EMAIL_NAME,
+        to: process.env.EMAIL_NAME,
+        bcc: "",
+        subject: 'IMPORTANT: Customer Email from ' + req.body.name,
+        text: emailComplete
+    };
 
-//     await wrappedSendMail(mailOptions, "Staff Request Confirmation")
-//     .then(function(info){
-//         console.log(info);
-//     })
-//     .catch(function(err) {
-//         console.error(err);
-//         returnStatus = 400;
-//         returnMessage = 'Bad Request: Invalid Email address - Email failed to send - Contact lwalker@qm3us.com to request that the server admin verifies that the server is properly sending emails.';
-//     });
+    await wrappedSendMail(mailOptions, "Contact Me")
+    .then(function(info) {
+        console.log(info);
+    })
+    .catch(function(err){
+        console.error(err);
+        returnStatus = 400;
+        returnMessage = 'Bad Request: Invalid Email address - Email failed to send - Contact lwalker@qm3us.com to request that the server admin verifies that the server is properly sending emails.';
+    });
 
-//     // 7. Return a successful response to the client
-//     return res.status(returnStatus).send(returnMessage);
-// });
+    // 7. Return a successful response to the client
+    return res.status(returnStatus).send(returnMessage);
+});
 
 // Respond with the specified file in ../src/assets/images
 app.get('/images/:fileName', function (req, res) {
