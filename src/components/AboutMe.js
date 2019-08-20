@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 export default class AboutMe extends Component {
     constructor(props) {
         super(props);
 
         this.handleClick = this.handleClick.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
+        this.element_in_viewport = this.element_in_viewport.bind(this);
+        this.animateProgressBars = this.animateProgressBars.bind(this);
+
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     handleClick(e) {
@@ -14,6 +20,55 @@ export default class AboutMe extends Component {
         } else {
             e.target.querySelector(".collapse-icon").setAttribute('data-icon', 'angle-down')
         }
+    }
+
+    handleScroll(e) {
+        if (this.element_in_viewport(document.getElementById("progress_bars"))) {
+            //If so, animate the progress bars.
+            this.animateProgressBars();
+    
+            //Stop checking if the progress bars are in view.
+            window.removeEventListener('scroll', this.handleScroll);
+        }
+    }
+
+    element_in_viewport(el) {
+        let top = el.offsetTop;
+        let left = el.offsetLeft;
+        let width = el.offsetWidth;
+        let height = el.offsetHeight;
+      
+        while(el.offsetParent) {
+          el = el.offsetParent;
+          top += el.offsetTop;
+          left += el.offsetLeft;
+        }
+      
+        return (
+          top < (window.pageYOffset + window.innerHeight) &&
+          left < (window.pageXOffset + window.innerWidth) &&
+          (top + height) > window.pageYOffset &&
+          (left + width) > window.pageXOffset
+        );
+    }
+    
+    animateProgressBars() {
+        if ($("[data-animate-width]").length>0) {
+            $("[data-animate-width]").each(function() {
+                $(this).animate({width: $(this).attr("data-animate-width")}, 800, 'linear' );
+                var animatedObject = $(this);
+                var Delay = animatedObject.find("span").attr("data-effect-delay");
+                setTimeout(function() {
+                    animatedObject.find("span").show('slow');
+                }, Delay);
+            });
+        };
+    }
+
+    componentDidMount() {
+        $("[data-animate-width]").each(function() {
+            $(this).find("span").hide();
+        });
     }
 
     render() {
