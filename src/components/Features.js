@@ -19,7 +19,7 @@ export default class Features extends Component {
                     </div>
                     <div className="row content-wrapper features-wrapper">
                         <div className="col-md-4 col-sm-6 col-xs-12 content-box mb-sm-30 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
-                            <div className="icon-top icon-black"><i className="fa icon-basic-webpage-multiple"></i></div>
+                            <div className="icon-top icon-black"><i className="icon icon-basic-webpage-multiple"></i></div>
                             <h5 className="features-title">Web Development</h5>
                             {/* <!-- <p>In the eyes of the consumer, a professional online presence is becoming an expected barrier to entry in an increasingly large amount of industries.  I can help you to create or improve your online precense.</p> --> */}
                             <p>
