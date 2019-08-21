@@ -12,7 +12,7 @@ export default class Banner extends Component {
             <div style={backgroundStyle} className="banner-image" >
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6 col-lg-offset-1 banner-caption">
+                        <div className="col-lg-6 offset-lg-1 banner-caption">
                             <h1>Marcus Quettan</h1>
                             <p>
                                 Developing. Creating. Solving.<br/>
