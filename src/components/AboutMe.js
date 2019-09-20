@@ -98,7 +98,11 @@ export default class AboutMe extends Component {
                                 </div>
                                 <div id="collapseOne" className="collapse accordianLinkHook show" role="tabpanel" aria-labelledby="headingOne">
                                     <div className="card-block light-gray-bg">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue dui vehicula, tincidunt diam ac, faucibus arcu. Etiam pellentesque imperdiet elit, id bibendum lorem auctor a. Donec rhoncus euismod pellentesque. Sed pretium semper nisi. Proin euismod euismod justo, quis mattis nulla iaculis nec. Integer at dolor ante. Donec efficitur suscipit nunc lobortis molestie.
+                                    <b>Master's of Business Administration - University of Georgia</b>
+                                    <br />
+                                    <b>Bachelor's of Electrical Engineering - Georgia Institute of Technology</b>
+                                    <br />
+                                    I've got a Master's in Business Administration from the University of Georgia as well as a Bachelor's in Electrical Engineering from the Georgia Institute of Technology.
                                     </div>
                                 </div>
                             </div>

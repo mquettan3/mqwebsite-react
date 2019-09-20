@@ -20,8 +20,7 @@ export default class Mission extends Component {
             <div  className="content-wrapper row">
             <div className="col-lg-12 text-center">
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue dui vehicula, tincidunt diam ac, faucibus arcu. Etiam pellentesque imperdiet elit, id bibendum lorem auctor a. Donec rhoncus euismod pellentesque. Sed pretium semper nisi. Proin euismod euismod justo, quis mattis nulla iaculis nec. Integer at dolor ante. Donec efficitur suscipit nunc lobortis molestie.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue dui vehicula, tincidunt diam ac, faucibus arcu. Etiam pellentesque imperdiet elit, id bibendum lorem auctor a. Donec rhoncus euismod pellentesque. Sed pretium semper nisi. Proin euismod euismod justo, quis mattis nulla iaculis nec. Integer at dolor ante. Donec efficitur suscipit nunc lobortis molestie.
+                Truthfuylly stated, I find a great deal of passion in enabling individuals to create their own, professional, small businesses.  My vow to each and every person I serve is to ensure that support for their creation is maintained to the best of my capability.  Modern solutions to modern problems.
                 </p>
             </div>
             </div>
