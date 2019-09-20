@@ -47,22 +47,22 @@ export default class Navbar extends Component {
     }
 
     handleScroll(e) {
-        const sy = this.scrollY();
-        const header = document.querySelector('.header');
+        // const sy = this.scrollY();
+        // const header = document.querySelector('.header');
         
-        if ( sy > this.state.addFixedHeaderOn ) {
-            header.classList.add('header-fixed');
-        }
-        else {
-            header.classList.remove('header-fixed');
-        }
+        // if ( sy > this.state.addFixedHeaderOn ) {
+        //     header.classList.add('header-fixed');
+        // }
+        // else {
+        //     header.classList.remove('header-fixed');
+        // }
     
-        if ( sy > this.state.addFixedHeaderOn ) {
-            header.classList.add('header-prepare');
-        }
-        else {
-            header.classList.remove('header-prepare');
-        }
+        // if ( sy > this.state.addFixedHeaderOn ) {
+        //     header.classList.add('header-prepare');
+        // }
+        // else {
+        //     header.classList.remove('header-prepare');
+        // }
     }
 
     handleNavMenuIconClick(e) {

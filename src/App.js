@@ -31,19 +31,19 @@ class App extends Component {
       <div className="landing-page">
     
         {/* <!-- Top Navigation Bar --> */}
-        <Navbar />
+        {/* <Navbar /> */}
     
         {/* <!-- Image Banner --> */}
         <Banner />
     
         {/* <!-- About Me Resume --> */}
-        <AboutMe />
+        {/* <AboutMe /> */}
 
         {/* <!-- Features List --> */}
-        <Features />
+        {/* <Features /> */}
     
         {/* <!-- My Mission --> */}
-        <Mission />
+        {/* <Mission /> */}
     
         {/* <!-- Image Gallery --> */}
         {/* <Image_Gallery /> */}
