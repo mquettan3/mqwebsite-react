@@ -31,7 +31,7 @@ class App extends Component {
       <div className="landing-page">
     
         {/* <!-- Top Navigation Bar --> */}
-        {/* <Navbar /> */}
+        <Navbar />
     
         {/* <!-- Image Banner --> */}
         <Banner />

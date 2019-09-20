@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 const axios = require('axios');
 
 // var serverLocation = process.env.REACT_APP_SERVER_LOCATION;
-var serverLocation = "http://192.168.56.102:5000";
+var serverLocation = "http://192.168.56.102:4000";
 
 export default class Contact extends Component {
     constructor(props) {
