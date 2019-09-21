@@ -66,9 +66,9 @@ export default class Navbar extends Component {
                             <div className="nav-menu-icon" onClick={this.handleNavMenuIconClick}>
                                 <a><i className="fa fa-times"></i></a>
                             </div>
-                            <li><Link className="page-scroll nav-link" to="/" onClick={this.handleNavMenuLinkClick}>Home</Link></li>
+                            <li><Link className="nav-link" to="/" onClick={this.handleNavMenuLinkClick}>Home</Link></li>
                             <li><Link className="nav-link" to="/aboutme" onClick={this.handleNavMenuLinkClick}>About Me</Link></li>
-                            <li><a className="nav-link" href="#features" onClick={this.handleNavMenuLinkClick}>Portfolio</a></li>
+                            <li><Link className="nav-link" to="/portfolio" onClick={this.handleNavMenuLinkClick}>Portfolio</Link></li>
                             <li><a className="page-scroll nav-link" href="#contact" onClick={this.handleNavMenuLinkClick}>Contact Me</a></li>
                         </ul>
                         {/* <!-- End Navigation Menu --> */}

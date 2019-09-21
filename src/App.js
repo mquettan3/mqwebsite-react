@@ -3,8 +3,7 @@ import WOW from "wow.js";
 import Navbar from "./components/Navbar.js";
 import Banner from "./components/Banner.js";
 import AboutMe from "./components/AboutMe.js";
-// import Features from "./components/Features.js";
-// import Mission from "./components/Mission.js";
+import Portfolio from "./components/Portfolio.js";
 import Contact from "./components/Contact.js";
 import Copyright from "./components/Copyright.js";
 // import ErrorPage from './components/ErrorPage.js';
@@ -62,7 +61,7 @@ class App extends Component {
               {/* <!-- Image Banner --> */}
               <Route exact path="/" component={Banner}/>
               <Route path="/aboutme" component={AboutMe}/>
-              {/* <Route path="/portfolio" component={Portfolio}/> */}
+              <Route path="/portfolio" component={Portfolio}/>
             {/* <Route path="/errorpage" component={ErrorPage}/> */}
               {/* <Redirect to={{pathname: "/errorpage"}} /> */}
             </Switch>

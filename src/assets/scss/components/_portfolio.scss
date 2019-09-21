@@ -1,0 +1,36 @@
+//Background image
+.portfolio {
+  background-color: $dark-background-color;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+//End Background Image
+
+// Caption Text Overlay
+.portfolio-caption {
+  font-family: $title-font;
+  position: absolute;
+  top: 30vh;
+}
+
+.portfolio-caption h1 {
+  color: $accent-color;
+  letter-spacing: 1.5px;
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: bold;
+}
+
+.portfolio-caption p {
+  font-size: 18px;
+  color: #ffffff;
+}
+// End Caption Text Overlay
+
+// Default Values
+.portfolio {
+  height: 100vh;
+}

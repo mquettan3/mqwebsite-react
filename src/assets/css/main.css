@@ -133,78 +133,32 @@
     padding: 20px 12px;
     border-top: 1px solid #444; } }
 
-#features .gallery-header h1 {
-  color: #cccccc; }
+.portfolio {
+  background-color: #1b1b1b;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-#features {
-  background-attachment: fixed; }
-
-.image_overlay {
-  background-color: rgba(0, 0, 0, 0.8); }
-
-.icon-top {
-  margin-bottom: 30px;
-  background-color: #f3f3f4;
-  display: inline-block;
-  font-size: 23px;
-  color: #333;
-  height: 70px;
-  line-height: 75px;
-  width: 70px;
-  text-align: center;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  transition: all 0.3s ease-in-out 0s;
-  -o-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  -webkit-transition: all 0.3s ease-in-out 0s; }
-
-.icon-black {
-  background-color: #2f2f2f;
-  color: #fff; }
-
-.content-box:hover .icon-black {
-  background-color: #002caa;
-  color: #fff; }
-
-.features-title {
-  margin-bottom: 15px; }
-
-h5.features-title {
-  font-size: 14px;
-  color: #cccccc;
-  text-transform: uppercase;
+.portfolio-caption {
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  margin-top: 0px;
-  line-height: 1.3;
-  margin-bottom: 15px;
-  letter-spacing: 1.5px; }
+  position: absolute;
+  top: 30vh; }
 
-.features-wrapper.row p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  color: #cccccc;
-  line-height: 1.6;
-  font-weight: 400;
-  margin-bottom: 15px;
-  margin-top: 0px; }
-
-.gallery-header {
-  font-family: "Raleway", sans-serif; }
-
-.gallery-header h1 {
+.portfolio-caption h1 {
+  color: #002caa;
+  letter-spacing: 1.5px;
+  font-size: 40px;
+  line-height: 44px;
   font-weight: bold; }
 
-.gallery-header span {
-  font-weight: normal; }
+.portfolio-caption p {
+  font-size: 18px;
+  color: #ffffff; }
 
-.lightBoxGallery {
-  text-align: center; }
-
-.lightBoxGallery img {
-  padding: 0 2px 0 2px; }
+.portfolio {
+  height: 100vh; }
 
 .contact-footer span {
   padding-right: 5px; }
