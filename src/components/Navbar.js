@@ -6,6 +6,7 @@ export default class Navbar extends Component {
     constructor(props) {
         super(props);
         this.handleNavMenuIconClick = this.handleNavMenuIconClick.bind(this)
+        this.handleNavMenuLinkClick = this.handleNavMenuLinkClick.bind(this)
         this.state = {
             isNavMenuActive: false
         }
@@ -34,6 +35,13 @@ export default class Navbar extends Component {
         this.setState({isNavMenuActive: !this.state.isNavMenuActive});
     }
 
+    handleNavMenuLinkClick(e) {
+        // Toggle the ability to scroll as well as toggle the nav_menu.
+        // Note:  This is only availabl on mobile because the nav_menu_icon is only visible on mobile.
+        this.props.enableScrolling();
+        this.setState({isNavMenuActive: false});
+    }
+
     render() {
         let showNavMenu = this.state.isNavMenuActive ? "active" : "";
         return (
@@ -57,10 +65,10 @@ export default class Navbar extends Component {
                             <div className="nav-menu-icon" onClick={this.handleNavMenuIconClick}>
                                 <a><i className="fa fa-times"></i></a>
                             </div>
-                            <li><a className="page-scroll nav-link" href="#home" onClick={this.handleNavMenuIconClick}>Home</a></li>
-                            <li><a className="nav-link" href="#aboutme" onClick={this.handleNavMenuIconClick}>About Me</a></li>
-                            <li><a className="nav-link" href="#features" onClick={this.handleNavMenuIconClick}>Portfolio</a></li>
-                            <li><a className="page-scroll nav-link" href="#contact" onClick={this.handleNavMenuIconClick}>Contact Me</a></li>
+                            <li><a className="page-scroll nav-link" href="#home" onClick={this.handleNavMenuLinkClick}>Home</a></li>
+                            <li><a className="nav-link" href="#aboutme" onClick={this.handleNavMenuLinkClick}>About Me</a></li>
+                            <li><a className="nav-link" href="#features" onClick={this.handleNavMenuLinkClick}>Portfolio</a></li>
+                            <li><a className="page-scroll nav-link" href="#contact" onClick={this.handleNavMenuLinkClick}>Contact Me</a></li>
                         </ul>
                         {/* <!-- End Navigation Menu --> */}
                     </div>

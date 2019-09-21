@@ -13,6 +13,7 @@ class App extends Component {
     super(props);
 
     this.toggleStopScrolling = this.toggleStopScrolling.bind(this);
+    this.enableScrolling = this.enableScrolling.bind(this);
 
     this.state = {
       isScrollingStopped: false
@@ -21,6 +22,10 @@ class App extends Component {
 
   toggleStopScrolling() {
     this.setState({isScrollingStopped: !this.state.isScrollingStopped});
+  }
+
+  enableScrolling() {
+    this.setState({isScrollingStopped: false});
   }
 
   componentDidMount() {
@@ -48,6 +53,7 @@ class App extends Component {
         {/* <!-- Top Navigation Bar --> */}
         <Navbar
           toggleStopScrolling = {this.toggleStopScrolling}
+          enableScrolling = {this.enableScrolling}
         />
     
         {/* <!-- Image Banner --> */}
