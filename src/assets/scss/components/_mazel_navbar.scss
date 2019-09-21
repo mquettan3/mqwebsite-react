@@ -79,8 +79,10 @@
     padding: 19px 0;
 }
 
-.nav-menu-icon.active a, .nav-menu-icon a.active,
-.nav-menu-icon:hover a, .nav-menu-icon a:hover,
+.nav-menu-icon.active .fa-times, .nav-menu-icon a.active .fa-times,
+.nav-menu-icon:hover .fa-times, .nav-menu-icon a:hover .fa-times,
+.nav-menu-icon.active .fa-bars, .nav-menu-icon a.active .fa-bars,
+.nav-menu-icon:hover .fa-bars, .nav-menu-icon a:hover .fa-bars,
 .nav-menu li.active a,
 .nav-menu li a.active,
 .nav-menu li:hover a,
@@ -95,7 +97,8 @@
     .navbar {
         height: 65px;
     }
-    .nav-menu  li {
+
+    .nav-menu li {
         display: block;
         width: 100%;
     }
@@ -108,7 +111,7 @@
         height: 100vh;
         background: #333;
         display: none;
-        z-index: 9999999;
+        padding: 0 40px;
     }
 
     .nav-menu-icon, .header-fixed .nav-menu-icon {
