@@ -6,31 +6,32 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 //End Background Image
 
-// Caption Text Overlay
-.portfolio-caption {
-  font-family: $title-font;
-  position: absolute;
-  top: 30vh;
-}
-
-.portfolio-caption h1 {
-  color: $accent-color;
-  letter-spacing: 1.5px;
-  font-size: 40px;
-  line-height: 44px;
-  font-weight: bold;
-}
-
-.portfolio-caption p {
-  font-size: 18px;
-  color: #ffffff;
-}
-// End Caption Text Overlay
-
-// Default Values
-.portfolio {
+.item-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
   height: 100vh;
+  padding-top: 120px;
+
+  .item {
+    flex-shrink: 0;
+    width: 100vw;
+    display: flex;
+
+    .item-image {
+      width: 50vw;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .item-description {
+      width: 50vw;
+    }
+  }
 }
