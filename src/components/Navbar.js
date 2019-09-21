@@ -6,7 +6,9 @@ export default class Navbar extends Component {
     constructor(props) {
         super(props);
         this.handleNavMenuIconClick = this.handleNavMenuIconClick.bind(this)
-        
+        this.state = {
+            isNavMenuActive: false
+        }
     }
 
     componentDidMount() {
@@ -23,21 +25,14 @@ export default class Navbar extends Component {
             }, 500);
             event.preventDefault();
         });
-
-        this.navMenuIcon = document.querySelector('.nav-menu-icon');
-        this.navMenuIcon.addEventListener('click', this.handleNavMenuIconClick);
-    }
-
-    componentWillUnmount() {
-        this.navMenuIcon.removeEventListener('click', this.handleNavMenuIconClick);
     }
 
     handleNavMenuIconClick(e) {
-        document.querySelector(".nav-menu-icon").classList.toggle('active');
-        document.querySelector(".nav-menu").classList.toggle('active');
+        this.setState({isNavMenuActive: !this.state.isNavMenuActive});
     }
 
     render() {
+        let showNavMenu = this.state.isNavMenuActive ? "active" : "";
         return (
             <section id="navbar">
                 <div className="wrapper">
@@ -49,13 +44,16 @@ export default class Navbar extends Component {
                         {/* <!-- End Logo --> */}
 
                         {/* <!--Navigation Icon--> */}
-                        <div className="nav-menu-icon">
+                        <div className="nav-menu-icon" onClick={this.handleNavMenuIconClick}>
                             <a><i className="fa fa-bars"></i></a>
                         </div>
                         {/* <!--End Navigation Icon--> */}
 
                         {/* <!-- Navigation Menu --> */}
-                        <ul className="nav-menu">
+                        <ul className={"nav-menu " + showNavMenu}>
+                            <div className="nav-menu-icon" onClick={this.handleNavMenuIconClick}>
+                                <a><i className="fa fa-times"></i></a>
+                            </div>
                             <li><a className="page-scroll nav-link" href="#home">Home</a></li>
                             <li><a className="nav-link" href="#aboutme">About Me</a></li>
                             <li><a className="nav-link" href="#features">Portfolio</a></li>
