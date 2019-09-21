@@ -89,6 +89,8 @@ export default class Contact extends Component {
                 }
                 this.setState({message: {value: e.target.value, isValid: validity}});
                 break;
+            default:
+                break;
         }
     }
 
@@ -130,7 +132,9 @@ export default class Contact extends Component {
                                         with a quote and an estimated time to completion once we have completely established the scope and requirements for the project.
                                         I look forward to hearing from you.<br/> --> */}
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue dui vehicula, tincidunt diam ac, faucibus arcu. Etiam pellentesque imperdiet elit, id bibendum lorem auctor a. Donec rhoncus euismod pellentesque. Sed pretium semper nisi. Proin euismod euismod justo, quis mattis nulla iaculis nec. Integer at dolor ante. Donec efficitur suscipit nunc lobortis molestie.
+                                            It would be great to hear from you!  Please, contact me with a description of your project to further this conversation.  I will in turn provide you
+                                            with a quote and an estimated time to completion once we have completely established the scope and requirements for the project.
+                                            I look forward to hearing from you!  Let's build something great together!
                                         <br />
                                         <i> - Marcus Quettan</i>
                                         </p>
@@ -144,14 +148,7 @@ export default class Contact extends Component {
                                         <ul className="social-links circle margin-clear animated-effect-1">
                                             <li className="facebook"><a target="_blank" href="http://www.facebook.com"><i className="fab fa-facebook-f fa-lg" data-fa-transform="down-4"></i></a></li>
                                             <li className="twitter"><a target="_blank" href="http://www.twitter.com"><i className="fab fa-twitter fa-lg" data-fa-transform="down-4"></i></a></li>
-                                            <li className="googleplus"><a target="_blank" href="http://plus.google.com"><i className="fab fa-google-plus fa-lg" data-fa-transform="down-4"></i></a></li>
                                             <li className="linkedin"><a target="_blank" href="http://www.linkedin.com"><i className="fab fa-linkedin fa-lg" data-fa-transform="down-4"></i></a></li>
-                                            <li className="xing"><a target="_blank" href="http://www.xing.com"><i className="fab fa-xing fa-lg" data-fa-transform="down-4"></i></a></li>
-                                            <li className="skype"><a target="_blank" href="http://www.skype.com"><i className="fab fa-skype fa-lg" data-fa-transform="down-4"></i></a></li>
-                                            <li className="youtube"><a target="_blank" href="https://www.youtube.com"><i className="fab fa-youtube fa-lg" data-fa-transform="down-4"></i></a></li>
-                                            <li className="dribbble"><a target="_blank" href="https://dribbble.com/"><i className="fab fa-dribbble fa-lg" data-fa-transform="down-4"></i></a></li>
-                                            <li className="pinterest"><a target="_blank" href="http://www.pinterest.com"><i className="fab fa-pinterest fa-lg" data-fa-transform="down-4"></i></a></li>
-                                            <li className="flickr"><a target="_blank" href="http://www.flickr.com"><i className="fab fa-flickr fa-lg" data-fa-transform="down-4"></i></a></li>
                                             <li className="instagram"><a target="_blank" href="http://www.instagram.com"><i className="fab fa-instagram fa-lg" data-fa-transform="down-4"></i></a></li>
                                         </ul>
                                     </div>

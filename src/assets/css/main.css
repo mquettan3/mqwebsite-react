@@ -124,7 +124,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #333;
+    background: #1b1b1b;
     display: none;
     padding: 0 40px; }
   .nav-menu-icon, .header-fixed .nav-menu-icon {
@@ -863,108 +863,32 @@ textarea.message_box.form-control {
     transform: rotate(360deg);
     /* Firefox 16+, IE 10+, Opera */ } }
 
-/*Style 2*/
-.collapse-style-2 .card {
-  border-color: transparent; }
-
-.collapse-style-2 .card + .card {
-  margin-top: 5px; }
-
-.collapse-style-2 .card-header {
-  background-color: transparent;
-  padding: 0; }
-
-.collapse-style-2 .card-header a {
-  color: #ffffff;
-  font-weight: 400;
-  display: inline-block;
-  width: 100%;
+.aboutme {
+  background-color: #1b1b1b;
   position: relative;
-  text-decoration: none;
-  padding: 10px 40px 10px 15px;
-  font-size: 16px; }
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-.collapse-style-2 .card-header a.collapsed {
-  background-color: #333333; }
-
-.collapse-style-2 .card-block {
-  border-top: none !important;
-  background-color: transparent;
-  padding: 15px 0; }
-
-.collapse-style-2 .card-block.p-15 {
-  padding: 15px; }
-
-.collapse-style-2 .card-header a.collapsed {
-  background-color: #373737; }
-
-.collapse-style-2 .card-header a {
-  background-color: #0d5ca2; }
-
-.collapse-style-2 .title-icon {
-  margin-right: 10px; }
-
-.collapse-style-2 .collapse-icon {
+.aboutme-caption {
+  font-family: "Raleway", sans-serif;
   position: absolute;
-  right: 10px; }
+  top: 30vh; }
 
-.label {
-  color: #333333;
-  font-size: 100%; }
+.aboutme-caption h1 {
+  color: #002caa;
+  letter-spacing: 1.5px;
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: bold; }
 
-.progress.style-1 {
-  margin-top: 25px;
-  margin-bottom: 20px;
-  background-color: #FAFAFA;
-  border: 1px solid #eaeaea;
-  height: 8px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  overflow: visible;
-  position: relative; }
+.aboutme-caption p {
+  font-size: 18px;
+  color: #ffffff; }
 
-.progress-bar {
-  float: left;
-  width: 0;
-  height: 100%;
-  font-size: 12px;
-  line-height: 20px;
-  color: #333333;
-  text-align: center;
-  background-color: #337ab7;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: width 1.5s ease;
-  -o-transition: width 1.5s ease;
-  transition: width 1.5s ease; }
-
-.progress.style-1 .progress-bar {
-  padding: 0;
-  text-align: left;
-  font-size: 11px;
-  font-weight: 300;
-  margin-top: 0px;
-  height: 4px;
-  margin: 1px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  position: relative; }
-
-.progress-bar-default {
-  background-color: #09afdf; }
-
-.progress .label {
-  position: absolute;
-  top: -16px;
-  right: 10px;
-  font-weight: 400;
-  padding: 0; }
+.aboutme {
+  height: 100vh; }
 
 section.copyright_section {
   background-color: #1b1b1b;

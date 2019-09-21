@@ -3,10 +3,12 @@ import WOW from "wow.js";
 import Navbar from "./components/Navbar.js";
 import Banner from "./components/Banner.js";
 import AboutMe from "./components/AboutMe.js";
-import Features from "./components/Features.js";
-import Mission from "./components/Mission.js";
+// import Features from "./components/Features.js";
+// import Mission from "./components/Mission.js";
 import Contact from "./components/Contact.js";
 import Copyright from "./components/Copyright.js";
+// import ErrorPage from './components/ErrorPage.js';
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -50,14 +52,21 @@ class App extends Component {
     return (
       <div className="landing-page" style={stopScrolling}>
     
-        {/* <!-- Top Navigation Bar --> */}
-        <Navbar
-          toggleStopScrolling = {this.toggleStopScrolling}
-          enableScrolling = {this.enableScrolling}
-        />
-    
-        {/* <!-- Image Banner --> */}
-        <Banner />
+        <BrowserRouter>
+            {/* <!-- Top Navigation Bar --> */}
+            <Navbar
+              toggleStopScrolling={this.toggleStopScrolling}
+              enableScrolling={this.enableScrolling}
+            />
+            <Switch>
+              {/* <!-- Image Banner --> */}
+              <Route exact path="/" component={Banner}/>
+              <Route path="/aboutme" component={AboutMe}/>
+              {/* <Route path="/portfolio" component={Portfolio}/> */}
+            {/* <Route path="/errorpage" component={ErrorPage}/> */}
+              {/* <Redirect to={{pathname: "/errorpage"}} /> */}
+            </Switch>
+        </BrowserRouter>
     
         {/* <!-- About Me Resume --> */}
         {/* <AboutMe /> */}
