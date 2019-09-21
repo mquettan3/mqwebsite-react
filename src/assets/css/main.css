@@ -96,7 +96,8 @@
   color: #fff;
   display: block;
   font-size: 17px;
-  padding: 19px 0; }
+  padding: 19px 0;
+  text-align: right; }
 
 .nav-menu-icon.active .fa-times, .nav-menu-icon a.active .fa-times,
 .nav-menu-icon:hover .fa-times, .nav-menu-icon a:hover .fa-times,
