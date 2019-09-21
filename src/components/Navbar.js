@@ -28,6 +28,9 @@ export default class Navbar extends Component {
     }
 
     handleNavMenuIconClick(e) {
+        // Toggle the ability to scroll as well as toggle the nav_menu.
+        // Note:  This is only availabl on mobile because the nav_menu_icon is only visible on mobile.
+        this.props.toggleStopScrolling();
         this.setState({isNavMenuActive: !this.state.isNavMenuActive});
     }
 

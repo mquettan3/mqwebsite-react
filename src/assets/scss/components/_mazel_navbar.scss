@@ -101,15 +101,14 @@
     }
 
     .nav-menu {
-        position: absolute;
-        top: 65px;
+        position: fixed;
+        top: 0;
         left: 0;
-        float: none;
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
         background: #333;
-        overflow-y: auto;
         display: none;
-        z-index: 999;
+        z-index: 9999999;
     }
 
     .nav-menu-icon, .header-fixed .nav-menu-icon {

@@ -8,7 +8,21 @@ import Mission from "./components/Mission.js";
 import Contact from "./components/Contact.js";
 import Copyright from "./components/Copyright.js";
 
-class App extends Component {  
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleStopScrolling = this.toggleStopScrolling.bind(this);
+
+    this.state = {
+      isScrollingStopped: false
+    }
+  }
+
+  toggleStopScrolling() {
+    this.setState({isScrollingStopped: !this.state.isScrollingStopped});
+  }
+
   componentDidMount() {
     // Initialize Animations
     const wow = new WOW();
@@ -27,11 +41,14 @@ class App extends Component {
   }
 
   render() {
+    let stopScrolling = this.state.isScrollingStopped ? {height: "100vh", overflow: "hidden"} : {}
     return (
-      <div className="landing-page">
+      <div className="landing-page" style={stopScrolling}>
     
         {/* <!-- Top Navigation Bar --> */}
-        <Navbar />
+        <Navbar
+          toggleStopScrolling = {this.toggleStopScrolling}
+        />
     
         {/* <!-- Image Banner --> */}
         <Banner />
