@@ -12,7 +12,7 @@ export default class AboutMe extends Component {
             <div className="wrapper">
                 <div className="aboutme-caption">
                     <h1>About Me</h1>
-                    <p>Simply put, I am a professional software developer interested in partnering with individuals and small businesses to enable them to take advantage of all that modern technology has to offer.  I can provide the custom software solutions you need!  But remember, this whole operation is just me.  If you're willing to be patient (This is a only side-gig for me right now), let's work together to bring your vision into reality!</p>
+                    <p>Simply put, I am a professional software developer interested in partnering with individuals and small businesses to enable them to take advantage of all that modern technology has to offer.  I can provide the custom software solutions you need!  But remember, this whole operation is just me.  If you're willing to be patient, let's work together to bring your vision into reality!</p>
                 </div>
             </div>
         </section>

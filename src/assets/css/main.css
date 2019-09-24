@@ -148,18 +148,43 @@
   overflow-x: scroll;
   overflow-y: hidden;
   height: 100vh;
-  padding-top: 120px; }
+  padding-top: 120px;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none; }
+  .item-list ::-webkit-scrollbar {
+    width: 0 !important; }
   .item-list .item {
     flex-shrink: 0;
     width: 100vw;
     display: flex; }
     .item-list .item .item-image {
       width: 50vw;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-size: cover; }
+      height: 100%; }
+      .item-list .item .item-image img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%; }
     .item-list .item .item-description {
-      width: 50vw; }
+      width: 50vw;
+      display: inline-block; }
+      .item-list .item .item-description .description-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%; }
+      .item-list .item .item-description h1 {
+        text-align: center;
+        color: white;
+        letter-spacing: 1.5px;
+        font-size: 40px;
+        line-height: 44px;
+        font-weight: bold; }
+      .item-list .item .item-description p {
+        color: white;
+        letter-spacing: 1.5px;
+        text-shadow: 3px 3px 4px #000000;
+        font-family: "Raleway", sans-serif; }
 
 .contact-footer span {
   padding-right: 5px; }
@@ -840,7 +865,8 @@ textarea.message_box.form-control {
 
 .aboutme-caption p {
   font-size: 18px;
-  color: #ffffff; }
+  color: #ffffff;
+  text-shadow: 3px 3px 4px #000000; }
 
 .aboutme {
   height: 100vh; }
