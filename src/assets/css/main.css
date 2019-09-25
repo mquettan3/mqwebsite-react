@@ -140,7 +140,7 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; }
+  height: 100; }
 
 .item-list {
   display: flex;
@@ -155,10 +155,10 @@
     width: 0 !important; }
   .item-list .item {
     flex-shrink: 0;
-    width: 100vw;
+    width: 100%;
     display: flex; }
     .item-list .item .item-image {
-      width: 50vw;
+      width: 50%;
       height: 100%; }
       .item-list .item .item-image img {
         position: relative;
@@ -166,7 +166,7 @@
         transform: translateY(-50%);
         width: 100%; }
     .item-list .item .item-description {
-      width: 50vw;
+      width: 50%;
       display: inline-block; }
       .item-list .item .item-description .description-wrapper {
         position: relative;
@@ -853,7 +853,7 @@ textarea.message_box.form-control {
 
 .aboutme-caption {
   font-family: "Raleway", sans-serif;
-  position: absolute;
+  position: relative;
   top: 30vh; }
 
 .aboutme-caption h1 {

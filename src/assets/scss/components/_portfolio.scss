@@ -6,7 +6,7 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100;
 }
 //End Background Image
 
@@ -24,11 +24,11 @@
 
   .item {
     flex-shrink: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
 
     .item-image {
-      width: 50vw;
+      width: 50%;
       height: 100%;
 
       img {
@@ -40,7 +40,7 @@
     }
 
     .item-description {
-      width: 50vw;
+      width: 50%;
       display: inline-block;
 
       .description-wrapper {
