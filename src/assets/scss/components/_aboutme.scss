@@ -6,6 +6,7 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 //End Background Image
 
@@ -22,6 +23,7 @@
     font-size: 40px;
     line-height: 44px;
     font-weight: bold;
+    margin-top: 0px;
 }
 
 .aboutme-caption p {
@@ -30,8 +32,3 @@
     text-shadow: 3px 3px 4px #000000;
 }
 // End Caption Text Overlay
-
-// Default Values
-.aboutme {
-    height: 100vh;
-}

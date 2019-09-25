@@ -5,7 +5,6 @@
 /* Navbar Style   ||-------------------*/
 #navbar {
     position: absolute;
-    top: 0px;
     width: 100%;
 }
 .navbar {
@@ -123,4 +122,10 @@
         padding: 20px 12px;
         border-top: 1px solid #444;
     }
+
+    ul.nav-menu {
+        margin-bottom: 0px;
+    }
+
+
 }

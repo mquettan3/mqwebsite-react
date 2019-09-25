@@ -35,7 +35,6 @@
 /* Navbar Style   ||-------------------*/
 #navbar {
   position: absolute;
-  top: 0px;
   width: 100%; }
 
 .navbar {
@@ -131,7 +130,9 @@
     display: block; }
   .nav-menu li a, .header-fixed .nav-menu li a {
     padding: 20px 12px;
-    border-top: 1px solid #444; } }
+    border-top: 1px solid #444; }
+  ul.nav-menu {
+    margin-bottom: 0px; } }
 
 .portfolio {
   background-color: #1b1b1b;
@@ -849,7 +850,8 @@ textarea.message_box.form-control {
   background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  height: 100vh; }
 
 .aboutme-caption {
   font-family: "Raleway", sans-serif;
@@ -861,15 +863,13 @@ textarea.message_box.form-control {
   letter-spacing: 1.5px;
   font-size: 40px;
   line-height: 44px;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-top: 0px; }
 
 .aboutme-caption p {
   font-size: 18px;
   color: #ffffff;
   text-shadow: 3px 3px 4px #000000; }
-
-.aboutme {
-  height: 100vh; }
 
 section.copyright_section {
   background-color: #1b1b1b;
@@ -903,4 +903,5 @@ h1 {
 .wrapper {
   width: 90vw;
   max-width: 1600px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 100%; }
