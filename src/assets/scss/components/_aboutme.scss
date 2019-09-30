@@ -8,6 +8,16 @@
     background-size: cover;
     height: 100vh;
 }
+
+.aboutme::before {
+    content: "";
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 //End Background Image
 
 // Caption Text Overlay
@@ -18,12 +28,14 @@
 }
 
 .aboutme-caption h1 {
-    color: $accent-color;
+    color: $light-accent-color;
     letter-spacing: 1.5px;
     font-size: 40px;
     line-height: 44px;
     font-weight: bold;
     margin-top: 0px;
+    text-shadow: 3px 3px 4px #000000;
+    text-transform: uppercase;
 }
 
 .aboutme-caption p {
@@ -31,4 +43,6 @@
     color: #ffffff;
     text-shadow: 3px 3px 4px #000000;
 }
+
+
 // End Caption Text Overlay

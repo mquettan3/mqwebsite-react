@@ -6,47 +6,80 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100;
+}
+
+.portfolio::before {
+    content: "";
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 //End Background Image
 
+.portfolio {
+  button {
+    display: none;
+  }
+  
+  @media (min-width: 1025px) {
+    .button-anchor {
+      position: relative;
+    }
+  
+    button {
+      display: block;
+      position: absolute;
+      top: 50%;
+    }
+      
+    .left-arrow {
+      left: -50px;
+    }
+  
+    .right-arrow {
+      right: -50px;
+    }
+  }
+}
+
+.item-list::-webkit-scrollbar { width: 0 !important }
+
 .item-list {
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: column;
   overflow-x: scroll;
   overflow-y: hidden;
-  height: 100vh;
   padding-top: 120px;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
-
-  ::-webkit-scrollbar { width: 0 !important }
 
   .item {
     flex-shrink: 0;
     width: 100%;
     display: flex;
+    flex-direction: column;
 
     .item-image {
-      width: 50%;
-      height: 100%;
+      width: 100%;
 
       img {
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
         width: 100%;
       }
     }
 
     .item-description {
-      width: 50%;
+      width: 100%;
       display: inline-block;
+      padding-bottom: 50px;
 
       .description-wrapper {
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
         width: 100%;
       }
 
@@ -57,6 +90,7 @@
         font-size: 40px;
         line-height: 44px;
         font-weight: bold;
+        text-shadow: 3px 3px 4px #000000;
       }
 
       p {
@@ -64,6 +98,37 @@
         letter-spacing: 1.5px;
         text-shadow: 3px 3px 4px #000000;
         font-family: "Raleway", sans-serif;
+
+        a {
+          color: $light-accent-color;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1025px) {
+    flex-direction: row;
+    height: 100vh;
+
+    .item {
+      flex-direction: row;
+
+      .item-image {
+        width: 50%;
+        img {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .item-description {
+        width: 50%;
+        padding-bottom: 0px;
+
+        .description-wrapper {
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
     }
   }

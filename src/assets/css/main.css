@@ -140,39 +140,61 @@
   background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100; }
+  background-size: cover; }
+
+.portfolio::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.portfolio button {
+  display: none; }
+
+@media (min-width: 1025px) {
+  .portfolio .button-anchor {
+    position: relative; }
+  .portfolio button {
+    display: block;
+    position: absolute;
+    top: 50%; }
+  .portfolio .left-arrow {
+    left: -50px; }
+  .portfolio .right-arrow {
+    right: -50px; } }
+
+.item-list::-webkit-scrollbar {
+  width: 0 !important; }
 
 .item-list {
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: column;
   overflow-x: scroll;
   overflow-y: hidden;
-  height: 100vh;
   padding-top: 120px;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none; }
-  .item-list ::-webkit-scrollbar {
-    width: 0 !important; }
   .item-list .item {
     flex-shrink: 0;
     width: 100%;
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
     .item-list .item .item-image {
-      width: 50%;
-      height: 100%; }
+      width: 100%; }
       .item-list .item .item-image img {
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
         width: 100%; }
     .item-list .item .item-description {
-      width: 50%;
-      display: inline-block; }
+      width: 100%;
+      display: inline-block;
+      padding-bottom: 50px; }
       .item-list .item .item-description .description-wrapper {
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
         width: 100%; }
       .item-list .item .item-description h1 {
         text-align: center;
@@ -180,12 +202,32 @@
         letter-spacing: 1.5px;
         font-size: 40px;
         line-height: 44px;
-        font-weight: bold; }
+        font-weight: bold;
+        text-shadow: 3px 3px 4px #000000; }
       .item-list .item .item-description p {
         color: white;
         letter-spacing: 1.5px;
         text-shadow: 3px 3px 4px #000000;
         font-family: "Raleway", sans-serif; }
+        .item-list .item .item-description p a {
+          color: #3263f9; }
+  @media (min-width: 1025px) {
+    .item-list {
+      flex-direction: row;
+      height: 100vh; }
+      .item-list .item {
+        flex-direction: row; }
+        .item-list .item .item-image {
+          width: 50%; }
+          .item-list .item .item-image img {
+            top: 50%;
+            transform: translateY(-50%); }
+        .item-list .item .item-description {
+          width: 50%;
+          padding-bottom: 0px; }
+          .item-list .item .item-description .description-wrapper {
+            top: 50%;
+            transform: translateY(-50%); } }
 
 .contact-footer span {
   padding-right: 5px; }
@@ -853,18 +895,29 @@ textarea.message_box.form-control {
   background-size: cover;
   height: 100vh; }
 
+.aboutme::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 .aboutme-caption {
   font-family: "Raleway", sans-serif;
   position: relative;
   top: 30vh; }
 
 .aboutme-caption h1 {
-  color: #002caa;
+  color: #3263f9;
   letter-spacing: 1.5px;
   font-size: 40px;
   line-height: 44px;
   font-weight: bold;
-  margin-top: 0px; }
+  margin-top: 0px;
+  text-shadow: 3px 3px 4px #000000;
+  text-transform: uppercase; }
 
 .aboutme-caption p {
   font-size: 18px;
