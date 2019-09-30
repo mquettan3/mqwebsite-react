@@ -19,13 +19,16 @@ export default class Portfolio extends Component {
 
     onLeftArrowClick(e) {
         if(this.itemListRef) {
-            this.itemListRef.current.scrollLeft -= this.itemListRef.current.clientWidth + 1;
+            this.itemListRef.current.scrollLeft -= this.itemListRef.current.clientWidth;
         }
     }
 
     onRightArrowClick(e) {
         if(this.itemListRef) {
-            this.itemListRef.current.scrollLeft += this.itemListRef.current.clientWidth + 1;
+            // If we're already at the last element, don't continue to scroll.
+            if(!((this.itemListRef.current.scrollLeft + this.itemListRef.current.clientWidth) >= this.itemListRef.current.scrollWidth)) {
+                this.itemListRef.current.scrollLeft += this.itemListRef.current.clientWidth;
+            }
         }
     }
 
