@@ -9,12 +9,18 @@ export default class Portfolio extends Component {
 
         this.onLeftArrowClick = this.onLeftArrowClick.bind(this);
         this.onRightArrowClick = this.onRightArrowClick.bind(this);
+        this.onItemListScroll = this.onItemListScroll.bind(this);
 
         this.itemListRef = React.createRef();
 
         this.state = {
-            list_position: 0
+            list_position: 0,
+            item_list_scroll_value: 0
         }
+    }
+
+    onItemListScroll(e) {
+        this.setState({item_list_scroll_value: e.currentTarget.scrollLeft});
     }
 
     onLeftArrowClick(e) {
@@ -36,11 +42,27 @@ export default class Portfolio extends Component {
         const backgroundStyle = {
             backgroundImage: "url(" + BackgroundImage + ")"
         }
+
+        let dotColors = ["#3263f9", "#bbb"];
+
+        if(this.itemListRef.current) {
+            if((0 <= this.itemListRef.current.scrollLeft) && (this.itemListRef.current.scrollLeft < this.itemListRef.current.clientWidth)) {
+                dotColors[0] = "#3263f9";
+            } else {
+                dotColors[0] = "#bbb";
+            }
+    
+            if((this.itemListRef.current.clientWidth <= this.itemListRef.current.scrollLeft) && (this.itemListRef.current.scrollLeft < (this.itemListRef.current.clientWidth * 2))) {
+                dotColors[1] = "#3263f9";
+            } else {
+                dotColors[1] = "#bbb";
+            }
+        }
         
         return (
             <section id="portfolio" style={backgroundStyle} className="portfolio">
                 <div className="wrapper button-anchor">
-                    <div ref={this.itemListRef} className="item-list">
+                    <div ref={this.itemListRef} className="item-list" onScroll={this.onItemListScroll}>
                         <div className="item">
                             <div className="item-image">
                                 <img src={QM3SolutionsWebsiteImage} alt="Multiple Device Display of the QM3 Solutions Website."></img>
@@ -64,8 +86,14 @@ export default class Portfolio extends Component {
                             </div>
                         </div>
                     </div>
-                    <button className="left-arrow" onClick={this.onLeftArrowClick}>Left</button>
-                    <button className="right-arrow" onClick={this.onRightArrowClick}>Right</button>
+                    
+                    <div className="dot-wrapper">
+                        <span className="dot" style={{backgroundColor: dotColors[0]}}></span>
+                        <span className="dot" style={{backgroundColor: dotColors[1]}}></span>
+                    </div>
+
+                    <div className="arrow left-arrow" onClick={this.onLeftArrowClick}></div>
+                    <div className="arrow right-arrow" onClick={this.onRightArrowClick}></div>
                 </div>
             </section>
         );
