@@ -10,6 +10,7 @@ export default class Portfolio extends Component {
         this.onLeftArrowClick = this.onLeftArrowClick.bind(this);
         this.onRightArrowClick = this.onRightArrowClick.bind(this);
         this.onItemListScroll = this.onItemListScroll.bind(this);
+        this.onDotClick = this.onDotClick.bind(this);
 
         this.itemListRef = React.createRef();
 
@@ -19,6 +20,13 @@ export default class Portfolio extends Component {
         }
     }
 
+    onDotClick(e) {
+        if(e.currentTarget.id == "dot-1") {
+            this.itemListRef.current.scrollLeft = 0;
+        } else if(e.currentTarget.id == "dot-2") {
+            this.itemListRef.current.scrollLeft = this.itemListRef.current.clientWidth;
+        }
+    }
     onItemListScroll(e) {
         this.setState({item_list_scroll_value: e.currentTarget.scrollLeft});
     }
@@ -89,8 +97,8 @@ export default class Portfolio extends Component {
                     </div>
 
                     <div className="dot-wrapper">
-                        <span className="dot" style={{backgroundColor: dotColors[0]}}></span>
-                        <span className="dot" style={{backgroundColor: dotColors[1]}}></span>
+                        <span id="dot-1" className="dot" style={{backgroundColor: dotColors[0]}} onClick={this.onDotClick}></span>
+                        <span id="dot-2" className="dot" style={{backgroundColor: dotColors[1]}} onClick={this.onDotClick}></span>
                     </div>
 
                     <div className="arrow left-arrow" onClick={this.onLeftArrowClick}></div>
