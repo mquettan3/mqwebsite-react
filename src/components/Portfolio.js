@@ -44,15 +44,16 @@ export default class Portfolio extends Component {
         }
 
         let dotColors = ["#3263f9", "#bbb"];
+        let newItemBuffer = 50;  // This is the amount of pixels BEFROE a full item has left the screen before the dots will update that we're on a new item.
 
         if(this.itemListRef.current) {
-            if((0 <= this.itemListRef.current.scrollLeft) && (this.itemListRef.current.scrollLeft < this.itemListRef.current.clientWidth)) {
+            if((0 <= this.itemListRef.current.scrollLeft) && (this.itemListRef.current.scrollLeft < this.itemListRef.current.clientWidth - newItemBuffer)) {
                 dotColors[0] = "#3263f9";
             } else {
                 dotColors[0] = "#bbb";
             }
     
-            if((this.itemListRef.current.clientWidth <= this.itemListRef.current.scrollLeft) && (this.itemListRef.current.scrollLeft < (this.itemListRef.current.clientWidth * 2))) {
+            if((this.itemListRef.current.clientWidth - newItemBuffer <= this.itemListRef.current.scrollLeft) && (this.itemListRef.current.scrollLeft < (this.itemListRef.current.clientWidth * 2))) {
                 dotColors[1] = "#3263f9";
             } else {
                 dotColors[1] = "#bbb";
@@ -86,7 +87,7 @@ export default class Portfolio extends Component {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="dot-wrapper">
                         <span className="dot" style={{backgroundColor: dotColors[0]}}></span>
                         <span className="dot" style={{backgroundColor: dotColors[1]}}></span>
