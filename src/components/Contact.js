@@ -145,9 +145,9 @@ export default class Contact extends Component {
                                         </ul>
                                         <div className="separator-2"></div>
                                         <ul className="social-links circle margin-clear animated-effect-1">
-                                            <li className="twitter"><a target="_blank" href="https://twitter.com/mqdarkblue"><i className="fab fa-twitter fa-lg" data-fa-transform="down-4"></i></a></li>
-                                            <li className="linkedin"><a target="_blank" href="https://www.linkedin.com/in/marcus-quettan-b2b71550"><i className="fab fa-linkedin fa-lg" data-fa-transform="down-4"></i></a></li>
-                                            <li className="instagram"><a target="_blank" href="https://www.instagram.com/mqdarkblue/"><i className="fab fa-instagram fa-lg" data-fa-transform="down-4"></i></a></li>
+                                            <li className="twitter"><a target="Marcus Quettan's Twitter" href="https://twitter.com/mqdarkblue"><i className="fab fa-twitter fa-lg" data-fa-transform="down-4"></i></a></li>
+                                            <li className="linkedin"><a target="Marcus Quettan's LinkedIn" href="https://www.linkedin.com/in/marcus-quettan-b2b71550"><i className="fab fa-linkedin fa-lg" data-fa-transform="down-4"></i></a></li>
+                                            <li className="instagram"><a target="Marcus Quettan's Instagram" href="https://www.instagram.com/mqdarkblue/"><i className="fab fa-instagram fa-lg" data-fa-transform="down-4"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
