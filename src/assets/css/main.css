@@ -403,7 +403,7 @@ textarea.message_box.form-control {
   width: 100%; }
 
 .dark .separator-2:after {
-  background: #444444;
+  background: #1b1b1b;
   background: -moz-linear-gradient(left, #444444 0%, #393939 35%, #323232 70%, #222222 100%);
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, #444444), color-stop(35%, #393939), color-stop(70%, #323232), color-stop(100%, #222222));
   background: -webkit-linear-gradient(left, #444444 0%, #393939 35%, #323232 70%, #222222 100%);
@@ -982,6 +982,44 @@ textarea.message_box.form-control {
   text-transform: uppercase; }
 
 .aboutme-caption p {
+  font-size: 18px;
+  color: #ffffff;
+  text-shadow: 3px 3px 4px #000000; }
+
+.errorpage {
+  background-color: #1b1b1b;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
+
+.errorpage::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.errorpage-caption {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  top: 30vh; }
+
+.errorpage-caption h1 {
+  color: #3263f9;
+  letter-spacing: 1.5px;
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: bold;
+  margin-top: 0px;
+  text-shadow: 3px 3px 4px #000000;
+  text-transform: uppercase; }
+
+.errorpage-caption p {
   font-size: 18px;
   color: #ffffff;
   text-shadow: 3px 3px 4px #000000; }

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import WOW from "wow.js";
 import Navbar from "./components/Navbar.js";
 import Banner from "./components/Banner.js";
 import AboutMe from "./components/AboutMe.js";
 import Portfolio from "./components/Portfolio.js";
 import Contact from "./components/Contact.js";
 import Copyright from "./components/Copyright.js";
-// import ErrorPage from './components/ErrorPage.js';
+import ErrorPage from './components/ErrorPage.js';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 class App extends Component {
@@ -30,10 +29,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // Initialize Animations
-    const wow = new WOW();
-    wow.init();
-
     // Couldn't figure out how to get this to trigger on load completion for each image (because css background images).  So, 1 second delay seems fine?
     setTimeout( () => {
       // Remove the pre-loader
@@ -62,25 +57,10 @@ class App extends Component {
               <Route exact path="/" component={Banner}/>
               <Route path="/aboutme" component={AboutMe}/>
               <Route path="/portfolio" component={Portfolio}/>
-            {/* <Route path="/errorpage" component={ErrorPage}/> */}
-              {/* <Redirect to={{pathname: "/errorpage"}} /> */}
+              <Route path="/errorpage" component={ErrorPage}/>
+              <Redirect to={{pathname: "/errorpage"}} />
             </Switch>
         </BrowserRouter>
-    
-        {/* <!-- About Me Resume --> */}
-        {/* <AboutMe /> */}
-
-        {/* <!-- Features List --> */}
-        {/* <Features /> */}
-    
-        {/* <!-- My Mission --> */}
-        {/* <Mission /> */}
-    
-        {/* <!-- Image Gallery --> */}
-        {/* <Image_Gallery /> */}
-    
-        {/* <!-- Audio Gallery --> */}
-        {/* <Audio_Gallery /> */}
     
         {/* <!-- My Contact Information --> */}
         <Contact />
