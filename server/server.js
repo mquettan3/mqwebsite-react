@@ -14,9 +14,6 @@ const fs = require('fs');
 // Import the emailer
 const nodemailer = require('nodemailer');
 
-// Unique ID Generator
-const uniqid = require('uniqid');
-
 // Define configuration variables
 const PORT = process.env.PORT || 4000;
 const app = express();
