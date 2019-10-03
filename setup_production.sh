@@ -4,12 +4,14 @@
 
 # Install npm/node
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get update
 sudo apt-get install -y nodejs
 
 # Install pm2
 npm install pm2 -g
 
 # Install nginx
+sudo apt-get install nginx
 # Be sure to update /etc/nginx/sites-available/default to be whatever site domain servername
 # Verify nginx syntax with the following
 # sudo nginx -t

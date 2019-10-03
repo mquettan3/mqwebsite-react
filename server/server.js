@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 // Used to allow for Cross-origin resource sharing (CORS) allows AJAX requests to skip the Same-origin policy and access resources from remote hosts.
 const cors = require('cors');
 const fs = require('fs');
+const path = require('path');
 
 // Import the emailer
 const nodemailer = require('nodemailer');
