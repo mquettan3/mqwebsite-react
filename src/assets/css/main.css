@@ -4,10 +4,13 @@
 .banner {
   background-color: #1b1b1b;
   position: relative;
-  background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover; }
+
+@media (min-width: 1025px) {
+  .banner {
+    background-attachment: fixed; } }
 
 .banner-caption {
   font-family: "Raleway", sans-serif;
@@ -137,10 +140,13 @@
 .portfolio {
   background-color: #1b1b1b;
   position: relative;
-  background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover; }
+
+@media (min-width: 1025px) {
+  .portfolio {
+    background-attachment: fixed; } }
 
 .portfolio::before {
   content: "";
@@ -951,11 +957,14 @@ textarea.message_box.form-control {
 .aboutme {
   background-color: #1b1b1b;
   position: relative;
-  background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; }
+
+@media (min-width: 1025px) {
+  .aboutme {
+    background-attachment: fixed; } }
 
 .aboutme::before {
   content: "";
@@ -994,6 +1003,10 @@ textarea.message_box.form-control {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; }
+
+@media (min-width: 1025px) {
+  .errorpage {
+    background-attachment: fixed; } }
 
 .errorpage::before {
   content: "";
