@@ -12,6 +12,9 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 
+// Compression for express ervers
+const compression = require('compression');
+
 // Import the emailer
 const mailgun = require("mailgun-js");
 const mg = mailgun({apiKey: process.env.MAILGUN_API_KEY, domain: process.env.DOMAIN_NAME});
@@ -22,6 +25,7 @@ const app = express();
 
 // Apply all middlewares to our server
 app.use(cors());
+app.use(compression());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
