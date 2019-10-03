@@ -8,7 +8,7 @@ export default class AboutMe extends Component {
     }
     
     return (
-        <section id="aboutme" style={backgroundStyle} className="aboutme">
+        <section id="home" style={backgroundStyle} className="aboutme">
             <div className="wrapper">
                 <div className="aboutme-caption">
                     <h1>About Me</h1>

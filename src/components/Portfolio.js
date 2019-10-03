@@ -69,7 +69,7 @@ export default class Portfolio extends Component {
         }
         
         return (
-            <section id="portfolio" style={backgroundStyle} className="portfolio">
+            <section id="home" style={backgroundStyle} className="portfolio">
                 <div className="wrapper button-anchor">
                     <div ref={this.itemListRef} className="item-list" onScroll={this.onItemListScroll}>
                         <div className="item">
