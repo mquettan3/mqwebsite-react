@@ -111,7 +111,7 @@
 .nav-menu li a:hover,
 .header-fixed .nav-menu li a.current,
 .header-fixed .nav-menu li.current a {
-  color: #3263f9;
+  color: #7b9cff;
   text-decoration: none; }
 
 @media all and (max-width: 1024px) {
@@ -205,7 +205,7 @@
   animation-name: arrow; }
 
 .portfolio .arrow:hover, .portfolio .arrow:active {
-  border-color: #3263f9; }
+  border-color: #7b9cff; }
 
 @keyframes arrow {
   0% {
@@ -278,7 +278,9 @@
         text-shadow: 3px 3px 4px #000000;
         font-family: "Raleway", sans-serif; }
         .item-list .item .item-description p a {
-          color: #3263f9; }
+          color: #7b9cff;
+          font-weight: bold;
+          font-size: 20px; }
   @media (min-width: 1025px) {
     .item-list {
       flex-direction: row;
@@ -316,7 +318,7 @@
 
 .contact-footer-inner .contact-footer-content,
 .contact-footer-inner .contact-footer-content p {
-  color: #777777; }
+  color: #bbbbbb; }
 
 .contact-footer-inner .contact-footer-content p,
 .contact-footer-inner .contact-footer-content li {
@@ -324,16 +326,16 @@
   line-height: 1.5; }
 
 .contact-footer-content .text-default.fa {
-  color: #3263f9; }
+  color: #7b9cff; }
 
 .contact-footer-content .text-default.a {
-  color: #3263f9; }
+  color: #7b9cff; }
 
 .link-dark {
-  color: #777777; }
+  color: #bbbbbb; }
 
 .link-dark:hover {
-  color: #777777;
+  color: #bbbbbb;
   text-decoration: underline; }
 
 .form-group {
@@ -553,7 +555,7 @@ textarea.message_box.form-control {
 
 .default.social-links li a:hover {
   background-color: #ffffff;
-  color: #777777; }
+  color: #bbbbbb; }
 
 .dark .social-links li a {
   background-color: rgba(0, 0, 0, 0.2);
@@ -582,14 +584,14 @@ textarea.message_box.form-control {
   margin: 0 5px 5px 0; }
 
 .contact-footer-content .social-links li a {
-  color: #777777;
+  color: #bbbbbb;
   background-color: transparent;
-  border-color: #777777; }
+  border-color: #bbbbbb; }
 
 .contact-footer-content .social-links li a:hover {
   color: #fff;
-  background-color: #777777;
-  border-color: #777777; }
+  background-color: #bbbbbb;
+  border-color: #bbbbbb; }
 
 .social-links.small li a {
   width: 30px;
@@ -981,7 +983,7 @@ textarea.message_box.form-control {
   top: 30vh; }
 
 .aboutme-caption h1 {
-  color: #3263f9;
+  color: #7b9cff;
   letter-spacing: 1.5px;
   font-size: 40px;
   line-height: 44px;
@@ -998,7 +1000,6 @@ textarea.message_box.form-control {
 .errorpage {
   background-color: #1b1b1b;
   position: relative;
-  background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1023,7 +1024,7 @@ textarea.message_box.form-control {
   top: 30vh; }
 
 .errorpage-caption h1 {
-  color: #3263f9;
+  color: #7b9cff;
   letter-spacing: 1.5px;
   font-size: 40px;
   line-height: 44px;
@@ -1043,7 +1044,7 @@ section.copyright_section {
   vertical-align: middle; }
 
 section.copyright_section p {
-  color: #777777;
+  color: #bbbbbb;
   opacity: 0.25; }
 
 .landing-page .navy-line {
