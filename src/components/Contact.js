@@ -140,8 +140,8 @@ export default class Contact extends Component {
         
                                         <ul className="list-inline mb-20">
                                             <li><span><i className="text-default fa fa-map-marker"></i></span> Atlanta, GA</li>
-                                            <li><span><i className="text-default fa fa-phone"></i></span> +1 (770) 765-5515</li>
-                                            <li><a href="mailto:mquettan@gmail.com" className="link-dark"><span><i className="text-default fa fa-envelope"></i></span> mquettan@gmail.com</a></li>
+                                            <li><span><i className="text-default fa fa-phone"></i></span> +1 (404) 941-5627</li>
+                                            <li><a href="mailto:me@marcusquettan.com" className="link-dark"><span><i className="text-default fa fa-envelope"></i></span> me@marcusquettan.com</a></li>
                                         </ul>
                                         <div className="separator-2"></div>
                                         <ul className="social-links circle margin-clear animated-effect-1">
