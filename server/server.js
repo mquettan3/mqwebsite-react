@@ -41,7 +41,7 @@ Message: {{Message}}
 
 async function wrappedSendMail(mailOptions, emailType) {
     return new Promise((resolve, reject)=> {
-        mg.messages().send(data, function (error, body) {
+        mg.messages().send(mailOptions, function (error, body) {
             if (error) {
                 console.error(error);
                 reject(Error("Failed to send " + emailType + " email to " + mailOptions.to));
