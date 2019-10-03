@@ -108,7 +108,7 @@ export default class Contact extends Component {
         }
         return (
             // <!-- Dark wrapper -->
-            <section id="contact" className="dark">
+            <section className="dark">
                 {/* <!-- .contact-footer start -->
                 <!-- ================ --> */}
                 <div className="contact-footer">
@@ -151,7 +151,7 @@ export default class Contact extends Component {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="col-md-6">
+                                <div id="contact" className="col-md-6">
                                     <div className="contact-footer-content">
                                         <h2 className="title">Contact Me</h2>
                                         {this.state.showSuccess && 
