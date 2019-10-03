@@ -13,7 +13,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Import the emailer
-const nodemailer = require('nodemailer');
+const mailgun = require("mailgun-js");
+const mg = mailgun({apiKey: process.env.MAILGUN_API_KEY, domain: process.env.DOMAIN_NAME});
 
 // Define configuration variables
 const PORT = process.env.PORT || 4000;
@@ -39,27 +40,16 @@ Message: {{Message}}
 `
 
 async function wrappedSendMail(mailOptions, emailType) {
-  return new Promise((resolve, reject)=> {
-      let transporter = nodemailer.createTransport({
-          serivce: 'gmail',
-          host: 'smtp.gmail.com',
-          port: 465,
-          secure: true, // use SSL
-          auth: {
-              user: process.env.EMAIL_NAME,
-              pass: process.env.EMAIL_PASSWORD
-          }
-      });
-
-      transporter.sendMail(mailOptions, function(error, info) {
-          if (error) {
-              console.error(error);
-              reject(Error("Failed to send " + emailType + " email to " + mailOptions.to));
-          } else {
-              resolve("Successfully sent " + emailType + " email to " + mailOptions.to);
-          }
-      });
-  })
+    return new Promise((resolve, reject)=> {
+        mg.messages().send(data, function (error, body) {
+            if (error) {
+                console.error(error);
+                reject(Error("Failed to send " + emailType + " email to " + mailOptions.to));
+            } else {
+                resolve("Successfully sent " + emailType + " email to " + mailOptions.to);
+            }
+        });
+    })
 }
 
 app.post('/email', async function (req, res) {
@@ -73,8 +63,7 @@ app.post('/email', async function (req, res) {
 
     var mailOptions = {
         from: process.env.EMAIL_NAME,
-        to: process.env.EMAIL_NAME,
-        bcc: "",
+        to: "mquettan@gmail.com",
         subject: 'IMPORTANT: Customer Email from ' + req.body.name,
         text: emailComplete
     };
