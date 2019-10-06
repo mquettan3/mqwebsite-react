@@ -34,6 +34,10 @@ class App extends Component {
       // Remove the pre-loader
       this.loader = document.querySelector('.loader-wrapper');
       this.loader.classList.add('hide-loader');
+
+      this.loader.addEventListener("transitionend", () => {
+        this.loader.remove();
+      });
     }, 1000);
   }
 
