@@ -6,29 +6,13 @@ import { Link } from "react-router-dom";
 export default class Navbar extends Component {
     constructor(props) {
         super(props);
-        this.handleNavMenuIconClick = this.handleNavMenuIconClick.bind(this)
-        this.handleNavMenuLinkClick = this.handleNavMenuLinkClick.bind(this)
+        this.handleNavMenuIconClick = this.handleNavMenuIconClick.bind(this);
+        this.handleNavMenuLinkClick = this.handleNavMenuLinkClick.bind(this);
         this.state = {
             isNavMenuActive: false
         }
     }
-
-    componentDidMount() {
-        $('body').scrollspy({
-            target: '#header',
-            offset: 80
-        })
-
-        // Page scrolling feature
-        $('a.page-scroll').bind('click', function (event) {
-            var link = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(link.attr('href')).offset().top - 65
-            }, 500);
-            event.preventDefault();
-        });
-    }
-
+    
     handleNavMenuIconClick(e) {
         // Toggle the ability to scroll as well as toggle the nav_menu.
         // Note:  This is only availabl on mobile because the nav_menu_icon is only visible on mobile.
@@ -41,6 +25,11 @@ export default class Navbar extends Component {
         // Note:  This is only availabl on mobile because the nav_menu_icon is only visible on mobile.
         this.props.enableScrolling();
         this.setState({isNavMenuActive: false});
+
+        if(e.currentTarget.hash){
+            e.preventDefault();
+            document.querySelector(e.currentTarget.hash).scrollIntoView({ behavior: 'smooth' });
+        }
     }
 
     render() {
