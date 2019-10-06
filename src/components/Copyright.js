@@ -17,14 +17,8 @@ export default class Copyright extends Component {
     render() {
         return (
             <section id="copyright" className="copyright_section">
-                <div className="container-fluid">
-                    <div className="row">
-                    <div className="col-lg-12">
-                        <p>
-                        Copyright <i className="far fa-copyright"></i> {this.state.currentYear} Marcus Quettan
-                        </p>
-                    </div>
-                    </div>
+                <div className="wrapper">
+                    <p>Copyright <i className="far fa-copyright"></i> {this.state.currentYear} Marcus Quettan</p>
                 </div>
             </section>
         );

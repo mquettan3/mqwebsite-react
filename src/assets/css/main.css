@@ -1065,7 +1065,8 @@ section.copyright_section {
 
 section.copyright_section p {
   color: #bbbbbb;
-  opacity: 0.25; }
+  opacity: 0.25;
+  margin-bottom: 0; }
 
 .landing-page .navy-line {
   width: 200px;
