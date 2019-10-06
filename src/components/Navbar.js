@@ -46,9 +46,9 @@ export default class Navbar extends Component {
     render() {
         let showNavMenu = this.state.isNavMenuActive ? "active" : "";
         return (
-            <section id="navbar">
+            <section className="navbar">
                 <div className="wrapper">
-                    <div className="navbar">
+                    <div className="navbar-inner">
                         {/* <!-- Logo --> */}
                         <div className="logo">
                             <a className="page-scroll" href="#home">QUETTAN</a>

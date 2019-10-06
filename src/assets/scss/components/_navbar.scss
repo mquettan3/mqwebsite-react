@@ -3,11 +3,12 @@
 /*-------------------------------------------------------------------------------------------*/
 
 /* Navbar Style   ||-------------------*/
-#navbar {
+.navbar {
     position: absolute;
     width: 100%;
+    z-index: 1;
 }
-.navbar {
+.navbar-inner {
     // position: absolute;
     display: flex;
     justify-content: space-between;
@@ -94,7 +95,7 @@
 }
 
 @media all and (max-width: 1024px) {
-    .navbar {
+    .navbar-inner {
         height: 65px;
     }
 

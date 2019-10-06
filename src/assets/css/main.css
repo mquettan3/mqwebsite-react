@@ -49,11 +49,12 @@
 /* NAVBAR     ||---------------------------- */
 /*-------------------------------------------------------------------------------------------*/
 /* Navbar Style   ||-------------------*/
-#navbar {
-  position: absolute;
-  width: 100%; }
-
 .navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 1; }
+
+.navbar-inner {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -128,7 +129,7 @@
   text-decoration: none; }
 
 @media all and (max-width: 1024px) {
-  .navbar {
+  .navbar-inner {
     height: 65px; }
   .nav-menu li {
     display: block;
