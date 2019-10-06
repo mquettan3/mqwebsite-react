@@ -6,7 +6,8 @@
   position: relative;
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  height: 100vh; }
 
 @media (min-width: 1025px) {
   .banner {
@@ -17,20 +18,32 @@
   position: absolute;
   top: 30vh;
   text-transform: uppercase; }
-
-.banner-caption h1 {
-  color: #002caa;
-  letter-spacing: 1.5px;
-  font-size: 40px;
-  line-height: 44px;
-  font-weight: bold; }
-
-.banner-caption p {
-  font-size: 18px;
-  color: #ffffff; }
-
-.banner {
-  height: 100vh; }
+  .banner-caption h1 {
+    color: #002caa;
+    letter-spacing: 1.5px;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: bold; }
+  .banner-caption p {
+    font-size: 18px;
+    color: #ffffff; }
+  .banner-caption a {
+    display: inline-block;
+    background-color: rgba(34, 34, 34, 0.8);
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    text-transform: none;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 10px; }
+    .banner-caption a i {
+      margin-left: 10px;
+      transition: margin 0.25s; }
+  .banner-caption a:hover {
+    text-decoration: none; }
+    .banner-caption a:hover i {
+      margin-left: 15px;
+      transition: margin 0.25s; }
 
 /*-------------------------------------------------------------------------------------------*/
 /* NAVBAR     ||---------------------------- */
