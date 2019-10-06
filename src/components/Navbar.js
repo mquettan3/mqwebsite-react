@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
-require('jquery.scrollto');
 import { Link } from "react-router-dom";
 
 export default class Navbar extends Component {
@@ -12,7 +10,7 @@ export default class Navbar extends Component {
             isNavMenuActive: false
         }
     }
-    
+
     handleNavMenuIconClick(e) {
         // Toggle the ability to scroll as well as toggle the nav_menu.
         // Note:  This is only availabl on mobile because the nav_menu_icon is only visible on mobile.
@@ -35,9 +33,9 @@ export default class Navbar extends Component {
     render() {
         let showNavMenu = this.state.isNavMenuActive ? "active" : "";
         return (
-            <section className="navbar">
+            <section id="navbar">
                 <div className="wrapper">
-                    <div className="navbar-inner">
+                    <div className="navbar">
                         {/* <!-- Logo --> */}
                         <div className="logo">
                             <a className="page-scroll" href="#home">QUETTAN</a>
