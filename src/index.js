@@ -6,9 +6,6 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 require('bootstrap');
 
-// WOW
-import 'wow.js/css/libs/animate.css';
-
 // Custom styles
 import './assets/css/main.css';
 
