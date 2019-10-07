@@ -6,7 +6,8 @@
   position: relative;
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  height: 100vh; }
 
 @media (min-width: 1025px) {
   .banner {
@@ -17,20 +18,32 @@
   position: absolute;
   top: 30vh;
   text-transform: uppercase; }
-
-.banner-caption h1 {
-  color: #002caa;
-  letter-spacing: 1.5px;
-  font-size: 40px;
-  line-height: 44px;
-  font-weight: bold; }
-
-.banner-caption p {
-  font-size: 18px;
-  color: #ffffff; }
-
-.banner {
-  height: 100vh; }
+  .banner-caption h1 {
+    color: #002caa;
+    letter-spacing: 1.5px;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: bold; }
+  .banner-caption p {
+    font-size: 18px;
+    color: #ffffff; }
+  .banner-caption a {
+    display: inline-block;
+    background-color: rgba(34, 34, 34, 0.8);
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    text-transform: none;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 10px; }
+    .banner-caption a i {
+      margin-left: 10px;
+      transition: margin 0.25s; }
+  .banner-caption a:hover {
+    text-decoration: none; }
+    .banner-caption a:hover i {
+      margin-left: 15px;
+      transition: margin 0.25s; }
 
 /*-------------------------------------------------------------------------------------------*/
 /* NAVBAR     ||---------------------------- */
@@ -38,7 +51,8 @@
 /* Navbar Style   ||-------------------*/
 #navbar {
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
 
 .navbar {
   display: flex;
@@ -874,7 +888,13 @@ textarea.message_box.form-control {
   width: 100%;
   height: 100%;
   z-index: 1001;
-  background-color: #333333; }
+  background-color: #333333;
+  opacity: 1;
+  transition: opacity 1s; }
+
+.hide-loader {
+  opacity: 0;
+  transition: opacity 1s; }
 
 #loader {
   display: block;
@@ -1043,7 +1063,8 @@ section.copyright_section {
 
 section.copyright_section p {
   color: #bbbbbb;
-  opacity: 0.25; }
+  opacity: 0.25;
+  margin-bottom: 0; }
 
 .landing-page .navy-line {
   width: 200px;

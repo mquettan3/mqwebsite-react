@@ -21,9 +21,9 @@ export default class Portfolio extends Component {
     }
 
     onDotClick(e) {
-        if(e.currentTarget.id == "dot-1") {
+        if(e.currentTarget.id === "dot-1") {
             this.itemListRef.current.scrollLeft = 0;
-        } else if(e.currentTarget.id == "dot-2") {
+        } else if(e.currentTarget.id === "dot-2") {
             this.itemListRef.current.scrollLeft = this.itemListRef.current.clientWidth;
         }
     }

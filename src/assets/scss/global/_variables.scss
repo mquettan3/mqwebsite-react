@@ -7,10 +7,17 @@ $yellow: #f8ac59;     // Warrning color
 $red: #ED5565;        // Danger color
 $orange: #ff6c00;     // Orange color duh
 
+// Pallette Colors:
+$white-pallette: #CAD2C5;
+$blue-pallette: #235789;
+$black-pallette: #222222;
+$green-pallette: #84A98C;
+$dark-green-pallette: #354F52;
+
 // Various colors
 $gray: #f3f3f4;         // Background wrapper color
 $light-gray: #D1DADE;   // Default label, badget
-$label-badget-color: #5E5E5E;
+$label-badget-color: rgb(41, 41, 41);
 $light-blue:#f3f6fb;
 $accordian-panel-background-color: #eaeaea;
 
@@ -21,7 +28,7 @@ $accent-font: 'Raleway', sans-serif;
 $logo-font: 'Quattrocento Sans';
 
 //General Site Colors
-$light-text-color: #bbbbbb;   // Body text
+$light-text-color: #bbbbbb;   // ContactMe Text Color
 $lighter-text-color: #cccccc;   // Body text
 $text-color: #333333;   // Body text
 $base-background-color: #f3f3f4;

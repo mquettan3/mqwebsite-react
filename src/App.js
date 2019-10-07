@@ -6,7 +6,6 @@ import Portfolio from "./components/Portfolio.js";
 import Contact from "./components/Contact.js";
 import Copyright from "./components/Copyright.js";
 import ErrorPage from './components/ErrorPage.js';
-import WOW from "wow.js";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 class App extends Component {
@@ -30,17 +29,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // Initialize Animations
-    const wow = new WOW();
-    wow.init();
-
     // Couldn't figure out how to get this to trigger on load completion for each image (because css background images).  So, 1 second delay seems fine?
     setTimeout( () => {
       // Remove the pre-loader
       this.loader = document.querySelector('.loader-wrapper');
-      this.loader.classList.add('animated', 'fadeOut');
-  
-      this.loader.addEventListener("animationend", () => {
+      this.loader.classList.add('hide-loader');
+
+      this.loader.addEventListener("transitionend", () => {
         this.loader.remove();
       });
     }, 1000);
