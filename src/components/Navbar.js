@@ -27,10 +27,7 @@ export default class Navbar extends Component {
         if(e.currentTarget.hash){
             e.preventDefault();
             let hash = e.currentTarget.hash
-            setTimeout( () => {
-                // Wait for the nav_menu to be dismissed on mobile before scrolling.
-                document.querySelector(hash).scrollIntoView({ behavior: 'smooth' });
-            }, 100);
+            window.scroll({ top: document.querySelector(hash).offsetTop, left: 0, behavior: 'smooth' });
         }
     }
 
