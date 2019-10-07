@@ -498,8 +498,7 @@ textarea.message_box.form-control {
   -webkit-transition: color 0.4s;
   -o-transition: color 0.4s;
   transition: color 0.4s;
-  position: relative;
-  z-index: 1; }
+  position: relative; }
 
 .social-links.animated-effect-1 li a:hover {
   color: #ffffff !important;
@@ -845,7 +844,6 @@ textarea.message_box.form-control {
   content: "\f00d"; }
 
 .social-links .dropdown-menu {
-  z-index: 103;
   padding: 5px;
   min-width: 270px;
   margin-top: 6px;
