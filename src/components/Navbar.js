@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import smoothscroll from 'smoothscroll-polyfill';
 
 export default class Navbar extends Component {
     constructor(props) {
@@ -9,6 +10,9 @@ export default class Navbar extends Component {
         this.state = {
             isNavMenuActive: false
         }
+
+        // kick off the polyfill!
+        smoothscroll.polyfill();
     }
 
     handleNavMenuIconClick(e) {
