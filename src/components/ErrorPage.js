@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import BackgroundImage from '../assets/images/Atlanta_Cityscape.jpg';
 
 export default class ErrorPage extends Component {
+    componentDidMount() {
+        window.scrollTo(0,0);
+    }
+
   render() {
     const backgroundStyle = {
         backgroundImage: "url(" + BackgroundImage + ")"

@@ -3,6 +3,10 @@ import BackgroundImage from '../assets/images/Atlanta_Cityscape.jpg';
 import { Link } from "react-router-dom";
 
 export default class Banner extends Component {
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
+
   render() {
     const backgroundStyle = {
         backgroundImage: "url(" + BackgroundImage + ")"

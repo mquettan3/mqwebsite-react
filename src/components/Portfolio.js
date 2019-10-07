@@ -20,6 +20,10 @@ export default class Portfolio extends Component {
         }
     }
 
+    componentDidMount() {
+        window.scrollTo(0,0);
+    }
+
     onDotClick(e) {
         if(e.currentTarget.id === "dot-1") {
             this.itemListRef.current.scrollLeft = 0;

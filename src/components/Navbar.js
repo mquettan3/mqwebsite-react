@@ -43,7 +43,7 @@ export default class Navbar extends Component {
                     <div className="navbar">
                         {/* <!-- Logo --> */}
                         <div className="logo">
-                            <a className="page-scroll" href="#home">QUETTAN</a>
+                            <Link className="page-scroll" to="/">QUETTAN</Link>
                         </div>
                         {/* <!-- End Logo --> */}
 

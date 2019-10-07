@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 // Require Axios for HTTP requests
 const axios = require('axios');
@@ -120,7 +121,7 @@ export default class Contact extends Component {
                                         <div className="container-fluid">
                                             <div className="row">
                                                 <div className="logo">
-                                                    <a className="page-scroll" href="#home">QUETTAN</a>
+                                                    <Link className="page-scroll" to="/">QUETTAN</Link>
                                                 </div>
                                             </div>
                                         </div>

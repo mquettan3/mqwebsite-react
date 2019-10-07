@@ -60,10 +60,11 @@ class App extends Component {
               <Route path="/errorpage" component={ErrorPage}/>
               <Redirect to={{pathname: "/errorpage"}} />
             </Switch>
-        </BrowserRouter>
     
-        {/* <!-- My Contact Information --> */}
-        <Contact />
+          {/* <!-- My Contact Information --> */}
+          <Contact />
+          
+        </BrowserRouter>
     
         {/* <!-- Copyright Information --> */}
         <Copyright />
