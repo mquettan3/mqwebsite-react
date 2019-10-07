@@ -62,8 +62,8 @@ class App extends Component {
             </Switch>
     
           {/* <!-- My Contact Information --> */}
-          <Contact />
-          
+          <Contact location={location.pathname} />
+
         </BrowserRouter>
     
         {/* <!-- Copyright Information --> */}

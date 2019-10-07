@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 
 // Require Axios for HTTP requests
 const axios = require('axios');
@@ -13,6 +12,7 @@ export default class Contact extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
         this.onErrorMessageClick = this.onErrorMessageClick.bind(this);
+        this.handleLogoClick = this.handleLogoClick.bind(this);
 
         this.state = {
             isSubmitButtonClicked: false,
@@ -25,6 +25,14 @@ export default class Contact extends Component {
             showInvalid: false
         }
 
+    }
+
+    handleLogoClick(e) {
+        if(e.currentTarget.hash){
+            e.preventDefault();
+            let hash = e.currentTarget.hash
+            window.scroll({ top: document.querySelector(hash).offsetTop, left: 0, behavior: 'smooth' });
+        }
     }
 
     onErrorMessageClick(e) {
@@ -121,7 +129,7 @@ export default class Contact extends Component {
                                         <div className="container-fluid">
                                             <div className="row">
                                                 <div className="logo">
-                                                    <Link className="page-scroll" to="/">QUETTAN</Link>
+                                                    <a className="page-scroll" href="#home" onClick={this.handleLogoClick}>QUETTAN</a>
                                                 </div>
                                             </div>
                                         </div>
