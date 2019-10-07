@@ -14,19 +14,23 @@ export default class Navbar extends Component {
     handleNavMenuIconClick(e) {
         // Toggle the ability to scroll as well as toggle the nav_menu.
         // Note:  This is only availabl on mobile because the nav_menu_icon is only visible on mobile.
-        this.props.toggleStopScrolling();
+        // this.props.toggleStopScrolling();
         this.setState({isNavMenuActive: !this.state.isNavMenuActive});
     }
 
     handleNavMenuLinkClick(e) {
         // Toggle the ability to scroll as well as toggle the nav_menu.
-        // Note:  This is only availabl on mobile because the nav_menu_icon is only visible on mobile.
+        // Note:  This is only available on mobile because the nav_menu_icon is only visible on mobile.
         this.props.enableScrolling();
         this.setState({isNavMenuActive: false});
 
         if(e.currentTarget.hash){
             e.preventDefault();
-            document.querySelector(e.currentTarget.hash).scrollIntoView({ behavior: 'smooth' });
+            let hash = e.currentTarget.hash
+            setTimeout( () => {
+                // Wait for the nav_menu to be dismissed on mobile before scrolling.
+                document.querySelector(hash).scrollIntoView({ behavior: 'smooth' });
+            }, 100);
         }
     }
 
